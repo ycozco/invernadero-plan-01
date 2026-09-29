@@ -49,6 +49,7 @@ function renderSpecies(key) {
 }
 
 $$('.species-tab').forEach(tab => tab.addEventListener('click', () => renderSpecies(tab.dataset.species)));
+renderSpecies('duranta');
 
 const recipeData = {
   s1: {label:'S1 · Arena + pumita', organic:0, pumice:42, sand:58},

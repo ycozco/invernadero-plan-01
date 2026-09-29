@@ -3,166 +3,695 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b1f1b" />
-    <meta name="description" content="Protocolo visual de propagación para un módulo experimental en San Camilo: Duranta, Lantana y Mioporo." />
-    <title>Cámara de propagación · San Camilo</title>
+    <meta name="theme-color" content="#090e17" />
+    <meta name="description" content="Protocolo técnico y panel de monitoreo experimental para la propagación de Duranta, Lantana y Mioporo en clima seco." />
+    <title>Cámara de Propagación · San Camilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="ambient ambient-one" aria-hidden="true"></div>
     <div class="ambient ambient-two" aria-hidden="true"></div>
 
+    <!-- Header Principal -->
     <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Cámara de propagación, inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" role="img"><path d="M9 31V14.5L20 7l11 7.5V31"/><path d="M6 31h28M14 31V20h12v11M20 7v8"/></svg>
-        </span>
-        <span><strong>CAMBIO DE CLIMA</strong><small>módulo experimental · San Camilo</small></span>
-      </a>
-      <div class="topbar-meta"><span class="live-dot"></span><span>Protocolo v1.0</span><span class="topbar-divider"></span><span id="current-date">28 SEP 2026</span></div>
+      <div class="topbar-container">
+        <a class="brand" href="#inicio" aria-label="Cámara de propagación, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="img"><path d="M9 31V14.5L20 7l11 7.5V31"/><path d="M6 31h28M14 31V20h12v11M20 7v8"/></svg>
+          </span>
+          <div>
+            <strong>CAMBIO DE CLIMA</strong>
+            <small>MÓDULO EXPERIMENTAL · SAN CAMILO</small>
+          </div>
+        </a>
+        <div class="topbar-meta">
+          <span class="status-badge"><span class="live-dot"></span> Telemetría v1.0</span>
+          <span class="topbar-divider"></span>
+          <span id="current-date">28 SEP 2026</span>
+        </div>
+      </div>
     </header>
 
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Navegación principal">
-        <div class="sidebar-label">Mapa del módulo</div>
-        <nav class="side-nav">
+    <!-- Barra de Navegación Sticky (Full Width) -->
+    <nav class="sticky-nav-bar" aria-label="Navegación del módulo">
+      <div class="nav-container">
+        <div class="side-nav">
           <a class="nav-link active" href="#inicio"><span>01</span> Punto de partida</a>
           <a class="nav-link" href="#especies"><span>02</span> Por especie</a>
           <a class="nav-link" href="#ambiente"><span>03</span> Microclima</a>
           <a class="nav-link" href="#sustratos"><span>04</span> Sustratos</a>
           <a class="nav-link" href="#modulo"><span>05</span> El módulo</a>
-          <a class="nav-link" href="#medir"><span>06</span> Medir y aprender</a>
-        </nav>
-        <div class="sidebar-note">
-          <span class="note-kicker">Hipótesis de diseño</span>
-          <p>Amortiguar radiación, desecación y frío; no crear un ambiente tropical permanente.</p>
+          <a class="nav-link" href="#medir"><span>06</span> Telemetría</a>
         </div>
-        <div class="sidebar-bottom"><span class="status-pill"><i></i> Diseño listo</span><span>Static / GitHub Pages</span></div>
-      </aside>
+        <a class="nav-action-btn" href="#medir">
+          <span class="live-dot"></span> Monitor en vivo
+        </a>
+      </div>
+    </nav>
 
+    <div class="app-shell">
       <main class="main-content">
+        <!-- Hero Section -->
         <section id="inicio" class="hero section-block">
-          <div class="hero-copy reveal">
-            <div class="eyebrow"><span class="eyebrow-line"></span> Decolumax · San Camilo</div>
-            <h1>Enraizar sin adivinar.<br /><em>Medir antes de escalar.</em></h1>
-            <p class="hero-intro">Un módulo de propagación pensado para un clima seco: cada decisión —desde el corte hasta la ventilación— se convierte en una variable que podemos observar, comparar y mejorar.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#especies">Explorar protocolos <span>↗</span></a>
-              <a class="text-link" href="#medir">Ver qué medir <span>↓</span></a>
+          <div class="section-inner hero-grid">
+            <div class="hero-copy reveal">
+              <div class="eyebrow"><span class="eyebrow-line"></span> Decolumax · San Camilo</div>
+              <h1>Enraizar sin adivinar.<br /><em>Medir antes de escalar.</em></h1>
+              <p class="hero-intro">
+                Un módulo de propagación de alta precisión diseñado para condiciones áridas: amortigua radiación extrema, evita la desecación del tejido y registra variables de microclima para optimizar el porcentaje de enraizamiento.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#especies">Explorar protocolos <span>→</span></a>
+                <a class="text-link" href="#medir">Ver telemetría en vivo <span>↓</span></a>
+              </div>
+              <div class="hero-proof">
+                <div class="proof-item">
+                  <strong>180</strong>
+                  <span>Esquejes piloto</span>
+                </div>
+                <div class="proof-item">
+                  <strong>3 × 2 m</strong>
+                  <span>Módulo inicial</span>
+                </div>
+                <div class="proof-item">
+                  <strong>3</strong>
+                  <span>Especies en paralelo</span>
+                </div>
+              </div>
             </div>
-            <div class="hero-proof">
-              <div><strong>180</strong><span>esquejes piloto</span></div>
-              <div><strong>3 × 2 m</strong><span>módulo inicial</span></div>
-              <div><strong>3</strong><span>especies en paralelo</span></div>
-            </div>
-          </div>
 
-          <div class="hero-visual reveal" aria-label="Diagrama animado del módulo de propagación">
-            <div class="visual-caption"><span>Vista de operación</span><span class="caption-live"><i></i> simulada</span></div>
-            <div class="greenhouse-scene">
-              <div class="sun-glow"></div>
-              <div class="scene-grid"></div>
-              <div class="greenhouse-roof"><span></span><span></span><span></span></div>
-              <div class="greenhouse-frame frame-left"></div><div class="greenhouse-frame frame-right"></div>
-              <div class="shade-cloth"></div>
-              <div class="mist mist-one"></div><div class="mist mist-two"></div><div class="mist mist-three"></div>
-              <div class="bench"><div class="bench-top"></div><div class="bench-leg leg-one"></div><div class="bench-leg leg-two"></div></div>
-              <div class="plant plant-a"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
-              <div class="plant plant-b"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
-              <div class="plant plant-c"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
-              <div class="sensor sensor-air"><b>●</b><span>T / HR<br /><strong>altura hoja</strong></span></div>
-              <div class="sensor sensor-root"><b>●</b><span>T sustrato<br /><strong>zona radicular</strong></span></div>
-              <div class="scene-label label-shade">malla 40–50 %</div>
-              <div class="scene-label label-bench">mesa elevada<br /><strong>50–70 cm</strong></div>
+            <div class="hero-visual reveal" aria-label="Diagrama animado del módulo de propagación">
+              <div class="visual-caption">
+                <span>Esquema técnico de operación</span>
+                <span class="caption-live"><i></i> Monitoreo activo</span>
+              </div>
+              <div class="greenhouse-scene">
+                <div class="sun-glow"></div>
+                <div class="scene-grid"></div>
+                <div class="greenhouse-roof"></div>
+                <div class="shade-cloth"></div>
+                <div class="mist mist-one"></div>
+                <div class="mist mist-two"></div>
+                <div class="mist mist-three"></div>
+                <div class="bench">
+                  <div class="bench-top"></div>
+                  <div class="bench-leg leg-one"></div>
+                  <div class="bench-leg leg-two"></div>
+                </div>
+                <div class="plant plant-a"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
+                <div class="plant plant-b"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
+                <div class="plant plant-c"><span class="stem"></span><i class="leaf leaf-1"></i><i class="leaf leaf-2"></i><i class="leaf leaf-3"></i></div>
+                <div class="sensor sensor-air"><b>●</b><span>T / HR · <strong>hoja</strong></span></div>
+                <div class="sensor sensor-root"><b>●</b><span>T sustrato · <strong>raíz</strong></span></div>
+                <div class="scene-label label-shade">Malla 40–50 %</div>
+                <div class="scene-label label-bench">Mesa elevada 50–70 cm</div>
+              </div>
+              <div class="visual-footer">
+                <span>Control térmico y de humedad relativa</span>
+                <span>Fase I / Prototipo</span>
+              </div>
             </div>
-            <div class="visual-footer"><span>El ambiente es una variable de cultivo</span><span>01 / 06</span></div>
           </div>
         </section>
 
+        <!-- Signal Strip -->
         <section class="signal-strip" aria-label="Principios de diseño">
-          <div class="signal-item"><span class="signal-number">01</span><div><strong>Raíz protegida</strong><small>20–26 °C en el sustrato</small></div></div>
-          <div class="signal-item"><span class="signal-number">02</span><div><strong>Hoja hidratada</strong><small>75–90 % HR al inicio</small></div></div>
-          <div class="signal-item"><span class="signal-number">03</span><div><strong>Medio aireado</strong><small>húmedo, nunca saturado</small></div></div>
-          <div class="signal-item"><span class="signal-number">04</span><div><strong>Decisión con datos</strong><small>temperatura, HR, pH y CE</small></div></div>
+          <div class="section-inner">
+            <div class="signal-grid">
+              <div class="signal-item">
+                <span class="signal-number">01</span>
+                <div>
+                  <strong>Raíz Protegida</strong>
+                  <small>20–26 °C en zona radicular</small>
+                </div>
+              </div>
+              <div class="signal-item">
+                <span class="signal-number">02</span>
+                <div>
+                  <strong>Hoja Hidratada</strong>
+                  <small>75–90 % HR en fase inicial</small>
+                </div>
+              </div>
+              <div class="signal-item">
+                <span class="signal-number">03</span>
+                <div>
+                  <strong>Medio Aireado</strong>
+                  <small>Húmedo, nunca saturado</small>
+                </div>
+              </div>
+              <div class="signal-item">
+                <span class="signal-number">04</span>
+                <div>
+                  <strong>Decisión con Datos</strong>
+                  <small>Registro continuo de T, HR y CE</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
+        <!-- Especies -->
         <section id="especies" class="section-block species-section">
-          <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> Tres rutas, un mismo módulo</div><h2>El proceso cambia<br /><em>con cada planta.</em></h2></div><p>La cámara es compartida. El tratamiento, el ritmo de nebulización y la evidencia se separan por especie para aprender sin mezclar resultados.</p></div>
-          <div class="species-tabs" role="tablist" aria-label="Seleccionar especie">
-            <button class="species-tab active" data-species="duranta" role="tab" aria-selected="true"><span class="tab-plant-dot duranta-dot"></span><span><strong>Duranta</strong><small>erecta</small></span><b>01</b></button>
-            <button class="species-tab" data-species="lantana" role="tab" aria-selected="false"><span class="tab-plant-dot lantana-dot"></span><span><strong>Lantana</strong><small>camara</small></span><b>02</b></button>
-            <button class="species-tab" data-species="mioporo" role="tab" aria-selected="false"><span class="tab-plant-dot mioporo-dot"></span><span><strong>Mioporo</strong><small>Myoporum</small></span><b>03</b></button>
-          </div>
+          <div class="section-inner">
+            <div class="section-heading reveal">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> Protocolos de Cultivo</div>
+                <h2>Tres rutas específicas,<br /><em>un solo módulo.</em></h2>
+              </div>
+              <p>
+                La cámara es compartida, pero el tratamiento hormonal, los intervalos de nebulización y la evaluación se gestionan de forma diferenciada por especie.
+              </p>
+            </div>
 
-          <div class="species-panel" id="species-panel" role="tabpanel">
-            <div class="species-visual">
-              <div class="species-orbit"></div><div class="species-glow"></div>
-              <div class="species-plant duranta-illustration" aria-hidden="true"><span class="trunk"></span><span class="branch branch-1"></span><span class="branch branch-2"></span><span class="branch branch-3"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="species-tag"><span>Tratamiento activo</span><strong id="species-code">D1 · ensayo IBA</strong></div>
-              <span class="floating-label label-cut">corte matinal</span><span class="floating-label label-root">raíz adventicia</span>
+            <div class="species-tabs" role="tablist" aria-label="Seleccionar especie">
+              <button class="species-tab active" data-species="duranta" role="tab" aria-selected="true">
+                <span class="tab-plant-dot duranta-dot"></span>
+                <span><strong>Duranta</strong><small>erecta</small></span>
+                <b>01</b>
+              </button>
+              <button class="species-tab" data-species="lantana" role="tab" aria-selected="false">
+                <span class="tab-plant-dot lantana-dot"></span>
+                <span><strong>Lantana</strong><small>camara</small></span>
+                <b>02</b>
+              </button>
+              <button class="species-tab" data-species="mioporo" role="tab" aria-selected="false">
+                <span class="tab-plant-dot mioporo-dot"></span>
+                <span><strong>Mioporo</strong><small>Myoporum</small></span>
+                <b>03</b>
+              </button>
             </div>
-            <div class="species-detail">
-              <div class="detail-top"><div><span class="detail-index" id="species-index">01 / 03</span><h3 id="species-name">Duranta <em>erecta</em></h3></div><span class="evidence-chip" id="species-evidence">evidencia experimental</span></div>
-              <p id="species-summary">El protocolo con más evidencia específica: esqueje tierno, dos yemas, hojas superiores conservadas y una comparación controlada de IBA.</p>
-              <div class="metric-grid" id="species-metrics"></div>
-              <div class="process-steps" id="species-steps"></div>
-              <div class="detail-callout" id="species-callout"><span>↳</span><p>El ensayo publicado encontró su mejor resultado general con 5000 ppm de IBA; úsalo como tratamiento experimental frente a 0 y 2500 ppm, no como receta universal.</p></div>
+
+            <div class="species-panel" id="species-panel" role="tabpanel">
+              <div class="species-visual">
+                <div class="species-orbit"></div>
+                <div class="species-glow"></div>
+                <div class="species-plant duranta-illustration" aria-hidden="true">
+                  <span class="trunk"></span>
+                  <span class="branch branch-1"></span>
+                  <span class="branch branch-2"></span>
+                  <span class="branch branch-3"></span>
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="species-tag">
+                  <span>Tratamiento activo</span>
+                  <strong id="species-code">D1 · ensayo IBA</strong>
+                </div>
+                <span class="floating-label label-cut">corte matinal</span>
+                <span class="floating-label label-root">raíz adventicia</span>
+              </div>
+
+              <div class="species-detail">
+                <div class="detail-top">
+                  <div>
+                    <span class="detail-index" id="species-index">01 / 03</span>
+                    <h3 id="species-name">Duranta <em>erecta</em></h3>
+                  </div>
+                  <span class="evidence-chip" id="species-evidence">evidencia experimental</span>
+                </div>
+                <p id="species-summary">
+                  El protocolo con más evidencia específica: esqueje tierno, dos yemas, hojas superiores conservadas y una comparación controlada de IBA.
+                </p>
+                <div class="metric-grid" id="species-metrics"></div>
+                <div class="process-steps" id="species-steps"></div>
+                <div class="detail-callout" id="species-callout">
+                  <span>↳</span>
+                  <p>El ensayo publicado encontró su mejor resultado general con 5000 ppm de IBA; úsalo como tratamiento experimental frente a 0 y 2500 ppm, no como receta universal.</p>
+                </div>
+              </div>
             </div>
+
+            <p class="section-source">
+              Referencias científicas: 
+              <a href="https://academicjournals.org/journal/AJPS/article-full-text/CBB437F61875" target="_blank" rel="noreferrer">Estudio de propagación de Duranta erecta ↗</a> · 
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4153567/" target="_blank" rel="noreferrer">Termotolerancia en Lantana camara ↗</a>
+            </p>
           </div>
-          <p class="section-source">Lectura base: <a href="https://academicjournals.org/journal/AJPS/article-full-text/CBB437F61875" target="_blank" rel="noreferrer">estudio de propagación de Duranta erecta ↗</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4153567/" target="_blank" rel="noreferrer">estudio de temperatura en Lantana camara ↗</a></p>
         </section>
 
+        <!-- Ambiente & Microclima -->
         <section id="ambiente" class="section-block environment-section">
-          <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> Control ambiental</div><h2>El clima no se programa<br /><em>se interpreta.</em></h2></div><p>Un mismo horario puede producir ambientes opuestos. La decisión nace de la combinación entre temperatura, humedad relativa, luz y respuesta del sustrato.</p></div>
-          <div class="environment-grid">
-            <div class="climate-card large-card reveal">
-              <div class="card-topline"><span>Objetivo de la cámara</span><span class="card-icon">◌</span></div>
-              <div class="climate-main"><div class="temperature-dial"><div class="dial-inner"><span class="dial-value" id="dial-temp">24.6°</span><small>aire interior</small></div></div><div class="climate-copy"><strong>Zona de confort</strong><p>Proteger el tejido antes de que aparezcan raíces. La zona radicular puede mantenerse caliente aunque el aire nocturno baje.</p><div class="range-line"><span>18°</span><i><b></b></i><span>30°</span></div><small class="range-caption">aire diurno recomendado</small></div></div>
-              <div class="card-foot"><span><i class="mini-dot green"></i> dentro de rango</span><span>actualización simulada cada 4 s</span></div>
+          <div class="section-inner">
+            <div class="section-heading reveal">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> Control Climático</div>
+                <h2>El clima no se programa,<br /><em>se interpreta.</em></h2>
+              </div>
+              <p>
+                Un horario fijo produce resultados desiguales en días calurosos o secos. Las compuertas y el pulso de nebulización responden al balance entre T, HR y luz.
+              </p>
             </div>
-            <div class="climate-card humidity-card reveal"><div class="card-topline"><span>Humedad relativa</span><span class="card-icon">⌁</span></div><div class="big-reading"><strong id="humidity-reading">82</strong><span>%</span></div><div class="bar-track"><i id="humidity-bar" style="width:82%"></i><b class="bar-marker" style="left:75%"></b></div><div class="bar-labels"><span>60 % post-raíz</span><span>75–90 % inicial</span></div><p>Ventilar si supera 90–92 % durante demasiado tiempo, aunque la temperatura esté baja.</p></div>
-            <div class="climate-card light-card reveal"><div class="card-topline"><span>Luz y sombra</span><span class="card-icon">☼</span></div><div class="sun-meter"><div class="sun-core">☼</div><div class="sun-rays"></div></div><strong>40–50 %</strong><p>sombra inicial · luz brillante indirecta</p><div class="light-ticks"><span></span><span class="active"></span><span class="active"></span><span></span></div></div>
+
+            <div class="environment-grid">
+              <div class="climate-card large-card reveal">
+                <div class="card-topline">
+                  <span>Consigna de Temperatura</span>
+                  <span class="card-icon">°C</span>
+                </div>
+                <div class="climate-main">
+                  <div class="temperature-dial">
+                    <div class="dial-inner">
+                      <span class="dial-value" id="dial-temp">24.6°</span>
+                      <small>Aire Interior</small>
+                    </div>
+                  </div>
+                  <div class="climate-copy">
+                    <strong>Rango Térmico de Confort</strong>
+                    <p>
+                      Protección del tejido antes de la emisión de raíces adventicias. La zona radicular se mantiene estable aunque baje la temperatura nocturna.
+                    </p>
+                    <div class="range-line">
+                      <span>18°C</span>
+                      <i><b></b></i>
+                      <span>30°C</span>
+                    </div>
+                    <small class="range-caption">Rango óptimo diurno de crecimiento</small>
+                  </div>
+                </div>
+                <div class="card-foot">
+                  <span><i class="mini-dot green"></i> Dentro de parámetros</span>
+                  <span>Muestreo continuo</span>
+                </div>
+              </div>
+
+              <div class="climate-card humidity-card reveal">
+                <div class="card-topline">
+                  <span>Humedad Relativa</span>
+                  <span class="card-icon">%</span>
+                </div>
+                <div class="big-reading">
+                  <strong id="humidity-reading">82</strong>
+                  <span>% HR</span>
+                </div>
+                <div class="bar-track">
+                  <i id="humidity-bar" style="width:82%"></i>
+                  <b class="bar-marker" style="left:75%"></b>
+                </div>
+                <div class="bar-labels">
+                  <span>60% post-enraizamiento</span>
+                  <span>75–90% fase inicial</span>
+                </div>
+                <p>
+                  Si la HR supera el 92% por periodos prolongados, se abre ventilación lateral para prevenir asfixia y patógenos fúngicos.
+                </p>
+              </div>
+
+              <div class="climate-card light-card reveal">
+                <div class="card-topline">
+                  <span>Radiación y Luz</span>
+                  <span class="card-icon">☼</span>
+                </div>
+                <div class="sun-meter">
+                  <div class="sun-core">☼</div>
+                </div>
+                <strong>40–50 %</strong>
+                <p>Sombra inicial recomendada · Luz difusa indirecta</p>
+                <div class="light-ticks">
+                  <span></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="decision-table reveal">
+              <div class="decision-title">
+                <span>Reglas de Operación del Módulo</span>
+                <small>Acción por umbrales de sensor, no por horario fijo</small>
+              </div>
+              <div class="decision-row">
+                <span class="decision-range">T &lt; 25 °C</span>
+                <strong>Cerrado / Parcial</strong>
+                <small>Conservar temperatura diurna y vigilar condensación interna</small>
+                <i class="state-dot safe" title="Condición favorable"></i>
+              </div>
+              <div class="decision-row">
+                <span class="decision-range">25–28 °C</span>
+                <strong>Apertura lateral 25–40%</strong>
+                <small>Favorecer renovación suave de aire sin desecar el ápice foliar</small>
+                <i class="state-dot watch" title="Atención moderada"></i>
+              </div>
+              <div class="decision-row">
+                <span class="decision-range">&gt; 28 °C</span>
+                <strong>Ventilación activa + pulso</strong>
+                <small>Si &gt; 30 °C: apertura completa de laterales y pulso corto de niebla</small>
+                <i class="state-dot alert" title="Condición crítica"></i>
+              </div>
+              <div class="decision-row">
+                <span class="decision-range">HR &gt; 90 %</span>
+                <strong>Ventilar de inmediato</strong>
+                <small>Evitar agua estancada sobre hojas para prevenir botritis</small>
+                <i class="state-dot moisture" title="Control de humedad"></i>
+              </div>
+            </div>
+
+            <p class="section-source">
+              Fuentes técnicas: 
+              <a href="https://extension.psu.edu/propagating-houseplants" target="_blank" rel="noreferrer">Penn State Extension · Humedad y Temperatura ↗</a>
+            </p>
           </div>
-          <div class="decision-table reveal"><div class="decision-title"><span>Reglas de operación</span><small>mover laterales según estado, no por reloj</small></div><div class="decision-row"><span class="decision-range">T &lt; 25 °C</span><strong>Cerrado / parcial</strong><small>conservar calor y vigilar HR</small><i class="state-dot safe"></i></div><div class="decision-row"><span class="decision-range">25–28 °C</span><strong>Abrir laterales parcialmente</strong><small>intercambiar aire sin secar el esqueje</small><i class="state-dot watch"></i></div><div class="decision-row"><span class="decision-range">&gt; 28 °C</span><strong>Ventilación considerable</strong><small>si &gt; 30 °C: apertura completa + sombra</small><i class="state-dot alert"></i></div><div class="decision-row"><span class="decision-range">HR &gt; 90–92 %</span><strong>Ventilar aunque no haga calor</strong><small>reducir riesgo de enfermedad</small><i class="state-dot moisture"></i></div></div>
-          <div class="section-source source-pair"><span>Fuente de manejo:</span> <a href="https://extension.psu.edu/propagating-houseplants" target="_blank" rel="noreferrer">Penn State Extension ↗</a><span> · </span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4153567/" target="_blank" rel="noreferrer">Lantana: 22 / 26 / 30 °C, 75 ± 2 % HR ↗</a></div>
         </section>
 
+        <!-- Sustratos -->
         <section id="sustratos" class="section-block substrate-section">
-          <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> Ensayo de medios</div><h2>La raíz necesita<br /><em>agua y aire.</em></h2></div><p>Las mezclas se comparan por volumen. La granulometría de la pumita importa: separar finos y trabajar con una fracción aproximada de 1–4 mm.</p></div>
-          <div class="substrate-layout">
-            <div class="recipe-list reveal">
-              <div class="recipe-list-head"><span>Recetas de prueba</span><span>v/v</span></div>
-              <button class="recipe-row active" data-recipe="s1"><span class="recipe-code">S1</span><span class="recipe-name">Arena + pumita</span><span class="recipe-formula"><i style="width:50%"></i><i style="width:50%"></i></span><span class="recipe-detail">50 / 50 / —</span></button>
-              <button class="recipe-row" data-recipe="s2"><span class="recipe-code">S2</span><span class="recipe-name">Arena + pumita + coco</span><span class="recipe-formula"><i style="width:40%"></i><i style="width:30%"></i><i style="width:30%"></i></span><span class="recipe-detail">40 / 30 / 30</span></button>
-              <button class="recipe-row" data-recipe="s3"><span class="recipe-code">S3</span><span class="recipe-name">Pumita + coco</span><span class="recipe-formula"><i style="width:25%"></i><i style="width:35%"></i><i style="width:40%"></i></span><span class="recipe-detail">25 / 35 / 40</span></button>
-              <button class="recipe-row" data-recipe="s4"><span class="recipe-code">S4</span><span class="recipe-name">Control comercial</span><span class="recipe-formula"><i style="width:50%"></i><i style="width:50%"></i></span><span class="recipe-detail">— / 50 / 50</span></button>
-              <div class="recipe-legend"><span><i class="legend-sand"></i> arena</span><span><i class="legend-pumice"></i> pumita 1–4 mm</span><span><i class="legend-organic"></i> turba / coco</span></div>
+          <div class="section-inner">
+            <div class="section-heading reveal">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> Medios de Enraizamiento</div>
+                <h2>Equilibrio entre<br /><em>agua disponible y oxígeno.</em></h2>
+              </div>
+              <p>
+                Las mezclas se prueban por volumen (v/v). La piedra pómez/pumita debe tamizarse (1–4 mm) eliminando finos para no colmatar los macroporos.
+              </p>
             </div>
-            <div class="substrate-card reveal"><div class="substrate-header"><span id="recipe-label">S1 · Arena + pumita</span><span class="selected-chip">seleccionada</span></div><div class="substrate-jar"><div class="jar-glass"><div class="jar-layer organic-layer" id="layer-organic"></div><div class="jar-layer pumice-layer" id="layer-pumice"></div><div class="jar-layer sand-layer" id="layer-sand"></div><div class="root-line"></div><div class="root root-1"></div><div class="root root-2"></div><div class="root root-3"></div></div><div class="jar-stem"><i></i><i></i><i></i></div><span class="jar-label label-air">poros de aire</span><span class="jar-label label-water">agua disponible</span></div><div class="substrate-facts"><div><span class="fact-icon">◎</span><strong>pH objetivo</strong><b>5.5–6.5</b></div><div><span class="fact-icon">≋</span><strong>CE inicial</strong><b>&lt; 1–1.5 dS/m</b></div><div><span class="fact-icon">↘</span><strong>Estado</strong><b>húmedo, no saturado</b></div></div></div>
+
+            <div class="substrate-layout">
+              <div class="recipe-list reveal">
+                <div class="recipe-list-head">
+                  <span>Fórmula de prueba</span>
+                  <span>Distribución v/v</span>
+                </div>
+                <button class="recipe-row active" data-recipe="s1">
+                  <span class="recipe-code">S1</span>
+                  <span class="recipe-name">Arena + Pumita</span>
+                  <span class="recipe-formula"><i style="width:58%"></i><i style="width:42%"></i></span>
+                  <span class="recipe-detail">58 / 42 / 0</span>
+                </button>
+                <button class="recipe-row" data-recipe="s2">
+                  <span class="recipe-code">S2</span>
+                  <span class="recipe-name">Arena + Pumita + Coco</span>
+                  <span class="recipe-formula"><i style="width:40%"></i><i style="width:30%"></i><i style="width:30%"></i></span>
+                  <span class="recipe-detail">40 / 30 / 30</span>
+                </button>
+                <button class="recipe-row" data-recipe="s3">
+                  <span class="recipe-code">S3</span>
+                  <span class="recipe-name">Pumita + Coco</span>
+                  <span class="recipe-formula"><i style="width:25%"></i><i style="width:35%"></i><i style="width:40%"></i></span>
+                  <span class="recipe-detail">25 / 35 / 40</span>
+                </button>
+                <button class="recipe-row" data-recipe="s4">
+                  <span class="recipe-code">S4</span>
+                  <span class="recipe-name">Control Comercial</span>
+                  <span class="recipe-formula"><i style="width:0%"></i><i style="width:50%"></i><i style="width:50%"></i></span>
+                  <span class="recipe-detail">0 / 50 / 50</span>
+                </button>
+                <div class="recipe-legend">
+                  <span><i class="legend-sand"></i> Arena lavada</span>
+                  <span><i class="legend-pumice"></i> Pumita 1–4 mm</span>
+                  <span><i class="legend-organic"></i> Turba / Coco</span>
+                </div>
+              </div>
+
+              <div class="substrate-card reveal">
+                <div class="substrate-header">
+                  <span id="recipe-label">S1 · Arena + pumita</span>
+                  <span class="selected-chip">Seleccionada</span>
+                </div>
+                <div class="substrate-jar">
+                  <div class="jar-glass">
+                    <div class="jar-layer organic-layer" id="layer-organic"></div>
+                    <div class="jar-layer pumice-layer" id="layer-pumice"></div>
+                    <div class="jar-layer sand-layer" id="layer-sand"></div>
+                    <div class="root-line"></div>
+                    <div class="root root-1"></div>
+                    <div class="root root-2"></div>
+                    <div class="root root-3"></div>
+                  </div>
+                  <div class="jar-stem">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <span class="jar-label label-air">Macroporos (O₂)</span>
+                  <span class="jar-label label-water">Película H₂O</span>
+                </div>
+                <div class="substrate-facts">
+                  <div>
+                    <strong>pH Recomendado</strong>
+                    <b>5.5 – 6.5</b>
+                  </div>
+                  <div>
+                    <strong>Conductividad (CE)</strong>
+                    <b>&lt; 1.2 dS/m</b>
+                  </div>
+                  <div>
+                    <strong>Régimen Hídrico</strong>
+                    <b>Capilar / Drenante</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="warning-strip reveal">
+              <span class="warning-icon">!</span>
+              <p>
+                <strong>Atención con el polvo fino:</strong> La fracción coloidal de arena o ceniza volcánica reduce drásticamente la capacidad de aireación. Lavar y medir pH y CE antes de incorporar sustratos nuevos.
+              </p>
+              <span class="warning-arrow">→</span>
+            </div>
+
+            <p class="section-source">
+              Base técnica: 
+              <a href="https://nurserycrops.ces.ncsu.edu/substrates/" target="_blank" rel="noreferrer">NC State University · Física y Química de Sustratos Hortícolas ↗</a>
+            </p>
           </div>
-          <div class="warning-strip reveal"><span class="warning-icon">!</span><p><strong>No pulverizar la piedra volcánica.</strong> El polvo muy fino puede reducir aireación y conductividad hidráulica. Tamizar, lavar y medir pH + CE antes de usar pumita o cascarilla carbonizada.</p><span class="warning-arrow">→</span></div>
-          <p class="section-source">Marco técnico: <a href="https://nurserycrops.ces.ncsu.edu/substrates/" target="_blank" rel="noreferrer">NC State Extension · propiedades físicas y químicas de sustratos ↗</a></p>
         </section>
 
+        <!-- Módulo & Estructura -->
         <section id="modulo" class="section-block module-section">
-          <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> Diseño de infraestructura</div><h2>Un refugio pequeño,<br /><em>un experimento limpio.</em></h2></div><p>Una mesa elevada y laterales enrollables convierten el túnel en una herramienta de manejo: mejor drenaje, menos contaminación y decisiones visibles.</p></div>
-          <div class="module-layout">
-            <div class="module-diagram reveal"><div class="diagram-top-label"><span>Sección transversal · no a escala</span><span>2.0 × 3.0 × 1.1 m</span></div><div class="cross-section"><div class="cross-shade">MALLA 40–50 %</div><div class="cross-roof"></div><div class="cross-side side-left"><span>lateral<br />enrollable</span></div><div class="cross-side side-right"><span>lateral<br />enrollable</span></div><div class="cross-sensor sensor-top"><b>●</b><span>T / HR<br /><small>altura hojas</small></span></div><div class="cross-plants"><i></i><i></i><i></i><i></i><i></i></div><div class="cross-bench"><span>mesa drenante elevada · 50–70 cm</span></div><div class="cross-sensor sensor-bottom"><b>●</b><span>T sustrato<br /><small>zona radicular</small></span></div><div class="cross-ground"></div></div><div class="diagram-legend"><span><i class="legend-green"></i> circulación de aire</span><span><i class="legend-orange"></i> sensores</span><span><i class="legend-blue"></i> nebulización</span></div></div>
-            <div class="module-specs reveal"><div class="spec-block"><span class="spec-number">01</span><div><strong>Arquitectura</strong><p>Plástico UV + cámara de aire de 15–25 cm bajo malla desmontable. Altura central sugerida: 1.1–1.2 m.</p></div></div><div class="spec-block"><span class="spec-number">02</span><div><strong>Riego que responde</strong><p>Nebulización aérea con pulsos cortos: más frecuente entre 09:00–15:30, solo si T/HR lo piden.</p></div></div><div class="spec-block"><span class="spec-number">03</span><div><strong>Frío donde importa</strong><p>Registrar 7–14 días antes de calentar. Si hace falta, preferir manta o cable bajo bandejas sobre calentar todo el aire.</p></div></div><div class="spec-block"><span class="spec-number">04</span><div><strong>Dos escalas de contenedor</strong><p>Fase I: 0.3–0.7 L. Fase II: 1–2 L; pasar a 3–5 L solo cuando la planta ya esté formada.</p></div></div></div>
+          <div class="section-inner">
+            <div class="section-heading reveal">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> Infraestructura Experimental</div>
+                <h2>Arquitectura modular<br /><em>y bancada elevada.</em></h2>
+              </div>
+              <p>
+                Una estructura de 3 × 2 m con bancada drenante a 60 cm del suelo evita la transmisión de patógenos del terreno y facilita el control térmico directo en las raíces.
+              </p>
+            </div>
+
+            <div class="module-layout">
+              <div class="module-diagram reveal">
+                <div class="diagram-top-label">
+                  <span>Corte transversal · Escala de diseño</span>
+                  <span>2.0 m (ancho) × 3.0 m (largo) × 1.2 m (altura)</span>
+                </div>
+                <div class="cross-section">
+                  <div class="cross-shade">Malla sombra 40–50% superior</div>
+                  <div class="cross-roof"></div>
+                  <div class="cross-side side-left">
+                    <span>Lateral<br />enrollable</span>
+                  </div>
+                  <div class="cross-side side-right">
+                    <span>Lateral<br />enrollable</span>
+                  </div>
+                  <div class="cross-sensor sensor-top">
+                    <b>●</b>
+                    <span>Sensor T/HR aire</span>
+                  </div>
+                  <div class="cross-plants">
+                    <i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="cross-bench">
+                    <span>Mesa drenante elevada · 50–70 cm</span>
+                  </div>
+                  <div class="cross-sensor sensor-bottom">
+                    <b>●</b>
+                    <span>Sonda T sustrato</span>
+                  </div>
+                  <div class="cross-ground"></div>
+                </div>
+                <div class="diagram-legend">
+                  <span><i class="legend-green"></i> Estructura y cultivo</span>
+                  <span><i class="legend-orange"></i> Puntos de sensorización</span>
+                  <span><i class="legend-blue"></i> Línea de nebulización</span>
+                </div>
+              </div>
+
+              <div class="module-specs reveal">
+                <div class="spec-block">
+                  <span class="spec-number">01</span>
+                  <div>
+                    <strong>Cubierta y Malla</strong>
+                    <p>Polietileno con filtro UV + cámara de separación de 15–20 cm bajo malla desmontable para amortiguar choque térmico.</p>
+                  </div>
+                </div>
+                <div class="spec-block">
+                  <span class="spec-number">02</span>
+                  <div>
+                    <strong>Microaspersión / Nebulización</strong>
+                    <p>Línea suspendida con boquillas antigoteo que emiten microgotas de 50–100 micras en pulsos cortos programables.</p>
+                  </div>
+                </div>
+                <div class="spec-block">
+                  <span class="spec-number">03</span>
+                  <div>
+                    <strong>Control Radicular en Invierno</strong>
+                    <p>En caso de descensos bruscos nocturnos, se prioriza cable calefactor bajo bandejas sobre calentar todo el volumen de aire.</p>
+                  </div>
+                </div>
+                <div class="spec-block">
+                  <span class="spec-number">04</span>
+                  <div>
+                    <strong>Contenedor y Trasplante</strong>
+                    <p>Fase inicial en bandejas de 0.3–0.5 L; trasplante a maceta definitiva solo cuando el cepellón consolide raíces activas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
+        <!-- Monitoreo & Telemetría en Vivo -->
         <section id="medir" class="section-block measure-section">
-          <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> Panel de aprendizaje</div><h2>Lo que no se mide<br /><em>se vuelve opinión.</em></h2></div><p>La primera campaña no busca una receta perfecta; busca un conjunto de datos propio para El Edén del Rey × San Camilo × agua local.</p></div>
-          <div class="monitor-panel reveal"><div class="monitor-header"><div><span class="monitor-kicker"><i></i> MODO DEMOSTRACIÓN</span><h3>Lecturas del módulo 01</h3></div><button class="toggle-button" id="demo-toggle" aria-pressed="true"><span></span> simulación activa</button></div><div class="monitor-readings"><div class="reading-card"><div class="reading-icon">T°</div><span>Temperatura aire</span><strong id="sensor-air-temp">24.6 <small>°C</small></strong><em class="reading-status good" id="air-temp-status">estable</em></div><div class="reading-card"><div class="reading-icon">HR</div><span>Humedad relativa</span><strong id="sensor-air-humidity">82 <small>%</small></strong><em class="reading-status good" id="air-humidity-status">en rango</em></div><div class="reading-card"><div class="reading-icon">Tz</div><span>Zona radicular</span><strong id="sensor-root-temp">22.8 <small>°C</small></strong><em class="reading-status good">protegida</em></div><div class="reading-card"><div class="reading-icon">CE</div><span>Agua / drenaje</span><strong>0.8 <small>dS/m</small></strong><em class="reading-status neutral">medir en campo</em></div></div><div class="monitor-chart"><div class="chart-labels"><span>últimas 12 h · referencia visual</span><span><i class="chart-line temp-line"></i> T aire <i class="chart-line humidity-line"></i> HR</span></div><svg viewBox="0 0 800 180" role="img" aria-label="Gráfico simulado de temperatura y humedad de las últimas 12 horas" preserveAspectRatio="none"><defs><linearGradient id="temp-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e79a5c" stop-opacity=".32"/><stop offset="1" stop-color="#e79a5c" stop-opacity="0"/></linearGradient><linearGradient id="hum-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#5ac4b2" stop-opacity=".20"/><stop offset="1" stop-color="#5ac4b2" stop-opacity="0"/></linearGradient></defs><g class="chart-grid"><line x1="0" y1="30" x2="800" y2="30"/><line x1="0" y1="75" x2="800" y2="75"/><line x1="0" y1="120" x2="800" y2="120"/><line x1="0" y1="165" x2="800" y2="165"/></g><path class="chart-area temp-area" d="M0,140 C80,145 110,130 160,110 S250,72 320,83 S400,52 470,62 S560,86 620,67 S720,48 800,34 V180 H0 Z"/><path class="chart-area hum-area" d="M0,49 C90,45 130,55 190,73 S300,110 370,94 S450,90 510,115 S620,95 680,108 S740,126 800,119 V180 H0 Z"/><path class="chart-path temp-path" d="M0,140 C80,145 110,130 160,110 S250,72 320,83 S400,52 470,62 S560,86 620,67 S720,48 800,34"/><path class="chart-path hum-path" d="M0,49 C90,45 130,55 190,73 S300,110 370,94 S450,90 510,115 S620,95 680,108 S740,126 800,119"/></svg><div class="chart-hours"><span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span></div></div><div class="monitor-footer"><span>Última lectura: <strong id="last-reading">ahora</strong></span><span>Datos reales: conectar T/HR a altura de hojas + T de sustrato</span></div></div>
-          <div class="measurement-grid reveal"><div class="measurement-card"><span class="measure-number">A</span><strong>En el túnel</strong><p>1 sensor T + HR a altura de hojas y 1 sensor de temperatura dentro del sustrato.</p></div><div class="measurement-card"><span class="measure-number">B</span><strong>En el exterior</strong><p>1 sensor T + HR exterior para saber cuánto amortigua realmente la estructura.</p></div><div class="measurement-card"><span class="measure-number">C</span><strong>En el agua y medio</strong><p>pH + CE del agua, sustrato nuevo, bolsa en producción y drenaje.</p></div><div class="measurement-card"><span class="measure-number">D</span><strong>En el resultado</strong><p>Porcentaje de enraizamiento, días a raíz visible y supervivencia por especie / mezcla.</p></div></div>
+          <div class="section-inner">
+            <div class="section-heading reveal">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> Telemetría y Registro</div>
+                <h2>Lo que no se mide,<br /><em>se vuelve opinión.</em></h2>
+              </div>
+              <p>
+                Panel de control en tiempo real para verificar el estado de los sensores dentro del módulo frente a las variables del exterior.
+              </p>
+            </div>
+
+            <div class="monitor-panel reveal">
+              <div class="monitor-header">
+                <div>
+                  <span class="monitor-kicker"><i></i> CONSOLA DE TELEMETRÍA EXPERIMENTAL</span>
+                  <h3>Módulo Piloto 01 · San Camilo</h3>
+                </div>
+                <button class="toggle-button" id="demo-toggle" aria-pressed="true">
+                  <span></span> Simulación activa
+                </button>
+              </div>
+
+              <div class="monitor-readings">
+                <div class="reading-card">
+                  <div class="reading-icon">T°</div>
+                  <span>Temperatura Aire</span>
+                  <strong id="sensor-air-temp">24.6 <small>°C</small></strong>
+                  <em class="reading-status good" id="air-temp-status">Estable</em>
+                </div>
+                <div class="reading-card">
+                  <div class="reading-icon">HR</div>
+                  <span>Humedad Relativa</span>
+                  <strong id="sensor-air-humidity">82 <small>%</small></strong>
+                  <em class="reading-status good" id="air-humidity-status">En rango óptimo</em>
+                </div>
+                <div class="reading-card">
+                  <div class="reading-icon">Tz</div>
+                  <span>Zona Radicular</span>
+                  <strong id="sensor-root-temp">22.8 <small>°C</small></strong>
+                  <em class="reading-status good">Sustrato protegido</em>
+                </div>
+                <div class="reading-card">
+                  <div class="reading-icon">CE</div>
+                  <span>Conductividad Agua</span>
+                  <strong>0.8 <small>dS/m</small></strong>
+                  <em class="reading-status neutral">Medición de campo</em>
+                </div>
+              </div>
+
+              <div class="monitor-chart">
+                <div class="chart-labels">
+                  <span>Registro histórico de las últimas 12 horas</span>
+                  <span>
+                    <i class="chart-line temp-line"></i> T aire (°C)
+                    <i class="chart-line humidity-line"></i> HR (%)
+                  </span>
+                </div>
+                <svg viewBox="0 0 800 180" role="img" aria-label="Gráfico de temperatura y humedad" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="temp-fill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0" stop-color="#f59e0b" stop-opacity=".35"/>
+                      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="hum-fill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0" stop-color="#0284c7" stop-opacity=".30"/>
+                      <stop offset="1" stop-color="#0284c7" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g class="chart-grid">
+                    <line x1="0" y1="30" x2="800" y2="30"/>
+                    <line x1="0" y1="75" x2="800" y2="75"/>
+                    <line x1="0" y1="120" x2="800" y2="120"/>
+                    <line x1="0" y1="165" x2="800" y2="165"/>
+                  </g>
+                  <path class="chart-area temp-area" d="M0,140 C80,145 110,130 160,110 S250,72 320,83 S400,52 470,62 S560,86 620,67 S720,48 800,34 V180 H0 Z"/>
+                  <path class="chart-area hum-area" d="M0,49 C90,45 130,55 190,73 S300,110 370,94 S450,90 510,115 S620,95 680,108 S740,126 800,119 V180 H0 Z"/>
+                  <path class="chart-path temp-path" d="M0,140 C80,145 110,130 160,110 S250,72 320,83 S400,52 470,62 S560,86 620,67 S720,48 800,34"/>
+                  <path class="chart-path hum-path" d="M0,49 C90,45 130,55 190,73 S300,110 370,94 S450,90 510,115 S620,95 680,108 S740,126 800,119"/>
+                </svg>
+                <div class="chart-hours">
+                  <span>00:00</span>
+                  <span>04:00</span>
+                  <span>08:00</span>
+                  <span>12:00</span>
+                  <span>16:00</span>
+                  <span>20:00</span>
+                </div>
+              </div>
+
+              <div class="monitor-footer">
+                <span>Última lectura: <strong id="last-reading">ahora</strong></span>
+                <span>Configuración de nodo: Sondas conectadas a bus I2C / ADC</span>
+              </div>
+            </div>
+
+            <div class="measurement-grid reveal">
+              <div class="measurement-card">
+                <span class="measure-number">A</span>
+                <strong>Sensor en Túnel</strong>
+                <p>1 sensor digital de T + HR a altura de canopia y 1 sonda de penetración en sustrato.</p>
+              </div>
+              <div class="measurement-card">
+                <span class="measure-number">B</span>
+                <strong>Referencia Exterior</strong>
+                <p>Sensor exterior a la sombra para calcular el diferencial térmico real del módulo.</p>
+              </div>
+              <div class="measurement-card">
+                <span class="measure-number">C</span>
+                <strong>Química del Agua</strong>
+                <p>Lectura periódica de pH y conductividad eléctrica en agua de riego y lixiviado de drenaje.</p>
+              </div>
+              <div class="measurement-card">
+                <span class="measure-number">D</span>
+                <strong>Tasa de Éxito</strong>
+                <p>Conteo porcentual de enraizamiento, vigor radicular y supervivencia por lote y fecha.</p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="closing-section"><div class="closing-mark">✳</div><p class="closing-kicker">La hipótesis es simple</p><h2>Un módulo compartido.<br /><em>Tres aprendizajes propios.</em></h2><p class="closing-copy">La literatura fija el rango de partida. La cámara y los sensores dirán qué funciona en este lugar.</p><div class="closing-actions"><a class="button button-light" href="#inicio">Volver al inicio <span>↑</span></a><a class="text-link light-link" href="https://github.com/againdika/Greenhouse" target="_blank" rel="noreferrer">Ver referencias de dashboard ↗</a></div></section>
+        <!-- Cierre -->
+        <section class="closing-section">
+          <div class="section-inner">
+            <div class="closing-mark">✦</div>
+            <p class="closing-kicker">Investigación Aplicada</p>
+            <h2>Un módulo compartido.<br /><em>Resultados medibles y reproducibles.</em></h2>
+            <p class="closing-copy">
+              La literatura establece las pautas de partida. La instrumentación y la validación en campo consolidan el protocolo definitivo para San Camilo.
+            </p>
+            <div class="closing-actions">
+              <a class="button button-primary" href="#inicio">Volver al inicio ↑</a>
+              <a class="button button-light" href="#medir">Revisar telemetría →</a>
+            </div>
+          </div>
+        </section>
 
-        <footer class="site-footer"><span>CAMBIO DE CLIMA / Decolumax</span><span>Propuesta visual para GitHub Pages · 2026</span><span><a href="https://extension.psu.edu/propagating-houseplants" target="_blank" rel="noreferrer">Fuentes técnicas ↗</a></span></footer>
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="footer-container">
+            <span>CAMBIO DE CLIMA · Decolumax</span>
+            <span>Plataforma Experimental de Propagación · 2026</span>
+            <span><a href="https://github.com/ycozco/invernadero-plan-01" target="_blank" rel="noreferrer">Repositorio GitHub ↗</a></span>
+          </div>
+        </footer>
       </main>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
