@@ -57,7 +57,7 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-xl: 20px;
 }
 
 *, *::before, *::after {
@@ -67,10 +67,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
+  width: 100%;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
   background-color: var(--bg-page);
   color: var(--text-body);
   font-family: var(--font-sans);
@@ -98,28 +102,28 @@ button {
   position: fixed;
   z-index: -1;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(90px);
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 .ambient-one {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   right: -100px;
   top: 100px;
   background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0) 70%);
 }
 
 .ambient-two {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   left: -150px;
   top: 600px;
   background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 70%);
 }
 
-/* Topbar Header */
+/* Topbar Header (Edge-to-edge 100%) */
 .topbar {
   background: var(--bg-dark);
   color: var(--text-on-dark);
@@ -130,9 +134,9 @@ button {
 }
 
 .topbar-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0.85rem 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.85rem 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -226,12 +230,12 @@ button {
   background: var(--bg-dark-border);
 }
 
-/* Sticky Navigation Bar (Tabs / Sub-header) */
+/* Sticky Navigation Bar (Edge-to-edge 100%) */
 .sticky-nav-bar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-light);
@@ -240,9 +244,9 @@ button {
 }
 
 .nav-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -252,7 +256,7 @@ button {
 .side-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   overflow-x: auto;
   padding: 8px 0;
   scrollbar-width: none;
@@ -266,7 +270,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 14px;
+  padding: 8px 14px;
   border-radius: 8px;
   color: var(--text-muted);
   font-size: 13px;
@@ -326,24 +330,27 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
 }
 
 .main-content {
   width: 100%;
+  max-width: 100%;
   min-width: 0;
 }
 
-/* Sections Base */
+/* Sections Base (100% edge-to-edge, NO limiting max-width) */
 .section-block {
   width: 100%;
-  padding: 5rem 2rem;
+  max-width: 100%;
+  padding: 3.5rem 1.75rem;
   position: relative;
 }
 
 .section-inner {
-  max-width: 1540px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .section-heading {
@@ -351,12 +358,13 @@ button {
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.25rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .section-heading h2 {
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(2rem, 2.5vw, 2.75rem);
   font-weight: 800;
   color: var(--text-heading);
   letter-spacing: -0.03em;
@@ -370,7 +378,7 @@ button {
 }
 
 .section-heading > p {
-  max-width: 520px;
+  max-width: 650px;
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.6;
@@ -396,23 +404,30 @@ button {
   border-radius: 2px;
 }
 
-/* Hero Section */
+/* Hero Section (100% Full Width 50/50 Grid) */
 .hero {
   background: linear-gradient(180deg, #ffffff 0%, var(--bg-page) 100%);
   border-bottom: 1px solid var(--border-light);
-  padding-top: 4rem;
-  padding-bottom: 4.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 3.5rem;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.5rem, 4.2vw, 3.75rem);
+  font-size: clamp(2.4rem, 3.4vw, 3.6rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -431,15 +446,15 @@ button {
   font-size: 16px;
   line-height: 1.65;
   color: var(--text-muted);
-  max-width: 580px;
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -502,6 +517,7 @@ button {
   gap: 1.25rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .proof-item {
@@ -528,7 +544,7 @@ button {
   margin-top: 2px;
 }
 
-/* Hero Visual Card (Chamber Blueprint) */
+/* Hero Visual Card (Chamber Blueprint - Scales full width) */
 .hero-visual {
   background: var(--bg-dark);
   border-radius: var(--radius-xl);
@@ -537,6 +553,7 @@ button {
   position: relative;
   overflow: hidden;
   min-height: 480px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -581,10 +598,10 @@ button {
 
 .sun-glow {
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
-  right: 10%;
+  right: 12%;
   top: 5%;
   background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%);
   animation: breathe 6s ease-in-out infinite;
@@ -602,10 +619,10 @@ button {
 }
 
 .greenhouse-roof {
-  width: 76%;
-  height: 120px;
+  width: 86%;
+  height: 125px;
   position: absolute;
-  left: 12%;
+  left: 7%;
   top: 35px;
   border: 1px solid rgba(16, 185, 129, 0.35);
   border-bottom: none;
@@ -623,16 +640,16 @@ button {
 .shade-cloth {
   position: absolute;
   height: 10px;
-  width: 78%;
-  left: 11%;
+  width: 88%;
+  left: 6%;
   top: 48px;
   background: repeating-linear-gradient(90deg, rgba(245, 158, 11, 0.6) 0 2px, transparent 2px 7px);
 }
 
 .bench {
   position: absolute;
-  left: 15%;
-  right: 15%;
+  left: 8%;
+  right: 8%;
   height: 85px;
   bottom: 80px;
 }
@@ -653,8 +670,8 @@ button {
   border-radius: 0 0 2px 2px;
 }
 
-.leg-one { left: 18%; }
-.leg-two { right: 18%; }
+.leg-one { left: 14%; }
+.leg-two { right: 14%; }
 
 .plant {
   position: absolute;
@@ -688,9 +705,9 @@ button {
 .plant .leaf-2 { left: 18px; top: 20px; transform: rotate(25deg); }
 .plant .leaf-3 { left: 8px; top: 6px; transform: rotate(-20deg); }
 
-.plant-a { left: 30%; transform: scale(0.9); }
-.plant-b { left: 48%; transform: scale(1.1); }
-.plant-c { left: 66%; transform: scale(0.85); }
+.plant-a { left: 25%; transform: scale(0.9); }
+.plant-b { left: 50%; transform: scale(1.1); }
+.plant-c { left: 75%; transform: scale(0.85); }
 
 .mist {
   position: absolute;
@@ -705,9 +722,9 @@ button {
   z-index: 5;
 }
 
-.mist-one { left: 28%; }
-.mist-two { left: 48%; animation-delay: 1.2s; }
-.mist-three { left: 66%; animation-delay: 2.2s; }
+.mist-one { left: 24%; }
+.mist-two { left: 49%; animation-delay: 1.2s; }
+.mist-three { left: 74%; animation-delay: 2.2s; }
 
 .sensor {
   position: absolute;
@@ -737,8 +754,8 @@ button {
   color: #f8fafc;
 }
 
-.sensor-air { right: 14%; top: 125px; }
-.sensor-root { left: 18%; bottom: 95px; }
+.sensor-air { right: 12%; top: 125px; }
+.sensor-root { left: 14%; bottom: 95px; }
 
 .scene-label {
   position: absolute;
@@ -748,20 +765,22 @@ button {
   z-index: 6;
 }
 
-.label-shade { left: 10%; top: 75px; }
-.label-bench { right: 10%; bottom: 48px; }
+.label-shade { left: 6%; top: 75px; }
+.label-bench { right: 6%; bottom: 48px; }
 
-/* Signal KPI Strip */
+/* Signal KPI Strip (Edge-to-edge 100%) */
 .signal-strip {
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
-  padding: 2.25rem 2rem;
+  padding: 1.5rem 1.75rem;
+  width: 100%;
 }
 
 .signal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
+  width: 100%;
 }
 
 .signal-item {
@@ -773,6 +792,7 @@ button {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   transition: all 0.2s;
+  width: 100%;
 }
 
 .signal-item:hover {
@@ -805,24 +825,26 @@ button {
   margin-top: 2px;
 }
 
-/* Species Section */
+/* Species Section (100% Full Width) */
 .species-section {
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .species-tabs {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin-bottom: 2rem;
   background: var(--bg-card-muted);
   padding: 6px;
   border-radius: 14px;
   border: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .species-tab {
-  flex: 1;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -833,6 +855,7 @@ button {
   transition: all 0.2s ease;
   position: relative;
   text-align: left;
+  width: 100%;
 }
 
 .species-tab:hover {
@@ -896,6 +919,7 @@ button {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xl);
   padding: 2.5rem;
+  width: 100%;
 }
 
 .species-visual {
@@ -908,6 +932,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .species-visual.lantana-mode {
@@ -1026,6 +1051,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .detail-top {
@@ -1079,6 +1105,7 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-bottom: 1.75rem;
+  width: 100%;
 }
 
 .metric-card {
@@ -1087,6 +1114,7 @@ button {
   padding: 14px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
 .metric-card span {
@@ -1109,6 +1137,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 1.75rem;
+  width: 100%;
 }
 
 .process-step {
@@ -1116,6 +1145,7 @@ button {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 12px;
+  width: 100%;
 }
 
 .process-step b {
@@ -1141,6 +1171,7 @@ button {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  width: 100%;
 }
 
 .detail-callout span {
@@ -1172,16 +1203,18 @@ button {
   text-decoration: underline;
 }
 
-/* Environment / Climate Section */
+/* Environment / Climate Section (100% Full Width) */
 .environment-section {
   background: var(--bg-page);
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .environment-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.85fr 0.85fr;
+  grid-template-columns: 1.4fr 1fr 1fr;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .climate-card {
@@ -1193,6 +1226,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .card-topline {
@@ -1451,6 +1485,7 @@ button {
   padding: 1.75rem;
   margin-top: 1.75rem;
   box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
 .decision-title {
@@ -1474,11 +1509,12 @@ button {
 
 .decision-row {
   display: grid;
-  grid-template-columns: 140px 1.4fr 2fr 30px;
+  grid-template-columns: 160px 1.5fr 2fr 30px;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   padding: 14px 0;
   border-bottom: 1px solid var(--border-subtle);
+  width: 100%;
 }
 
 .decision-row:last-child {
@@ -1491,9 +1527,10 @@ button {
   font-weight: 600;
   color: var(--emerald-600);
   background: var(--emerald-50);
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 6px;
   display: inline-block;
+  text-align: center;
 }
 
 .decision-row strong {
@@ -1518,16 +1555,18 @@ button {
 .state-dot.alert { background: var(--rose-500); }
 .state-dot.moisture { background: var(--cyan-500); }
 
-/* Substrates Section */
+/* Substrates Section (100% Full Width) */
 .substrate-section {
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .substrate-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 2rem;
+  width: 100%;
 }
 
 .recipe-list {
@@ -1535,6 +1574,7 @@ button {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xl);
   overflow: hidden;
+  width: 100%;
 }
 
 .recipe-list-head {
@@ -1553,9 +1593,9 @@ button {
 .recipe-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 45px 1.4fr 100px 90px;
+  grid-template-columns: 45px 1.4fr 140px 100px;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   padding: 16px 20px;
   border-bottom: 1px solid var(--border-light);
   transition: all 0.2s;
@@ -1568,7 +1608,7 @@ button {
 
 .recipe-row.active {
   background: #ffffff;
-  border-left: 3px solid var(--emerald-600);
+  border-left: 4px solid var(--emerald-600);
 }
 
 .recipe-code {
@@ -1640,6 +1680,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .substrate-header {
@@ -1789,6 +1830,7 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
 }
 
 .warning-icon {
@@ -1821,16 +1863,18 @@ button {
   margin-left: auto;
 }
 
-/* Module Infrastructure Section */
+/* Module Infrastructure Section (100% Full Width) */
 .module-section {
   background: var(--bg-page);
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .module-layout {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  width: 100%;
 }
 
 .module-diagram {
@@ -1839,6 +1883,7 @@ button {
   border-radius: var(--radius-xl);
   padding: 24px;
   box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
 .diagram-top-label {
@@ -1859,12 +1904,13 @@ button {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border-light);
+  width: 100%;
 }
 
 .cross-shade {
   position: absolute;
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   top: 20px;
   height: 12px;
   background: repeating-linear-gradient(90deg, rgba(16, 185, 129, 0.6) 0 2px, transparent 2px 8px);
@@ -1879,8 +1925,8 @@ button {
 .cross-roof {
   position: absolute;
   top: 40px;
-  left: 15%;
-  right: 15%;
+  left: 12%;
+  right: 12%;
   height: 120px;
   border: 2px solid #059669;
   border-bottom: none;
@@ -1896,8 +1942,8 @@ button {
   background: #059669;
 }
 
-.side-left { left: 15%; }
-.side-right { right: 15%; }
+.side-left { left: 12%; }
+.side-right { right: 12%; }
 
 .cross-side span {
   position: absolute;
@@ -1914,8 +1960,8 @@ button {
 .cross-bench {
   position: absolute;
   bottom: 85px;
-  left: 20%;
-  right: 20%;
+  left: 16%;
+  right: 16%;
   height: 18px;
   background: #334155;
   border-top: 3px solid var(--emerald-500);
@@ -1937,8 +1983,8 @@ button {
 .cross-plants {
   position: absolute;
   bottom: 103px;
-  left: 25%;
-  right: 25%;
+  left: 20%;
+  right: 20%;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -1998,8 +2044,8 @@ button {
   box-shadow: var(--shadow-sm);
 }
 
-.sensor-top { top: 90px; right: 20%; }
-.sensor-bottom { bottom: 70px; left: 18%; }
+.sensor-top { top: 90px; right: 18%; }
+.sensor-bottom { bottom: 70px; left: 16%; }
 
 .cross-sensor b { color: var(--amber-500); }
 .cross-sensor span { color: var(--text-heading); font-weight: 600; }
@@ -2030,6 +2076,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
 }
 
 .spec-block {
@@ -2040,6 +2087,7 @@ button {
   display: flex;
   gap: 16px;
   box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
 .spec-number {
@@ -2067,9 +2115,10 @@ button {
   margin: 4px 0 0;
 }
 
-/* Measure & Telemetry Section */
+/* Measure & Telemetry Section (100% Full Width) */
 .measure-section {
   background: #ffffff;
+  width: 100%;
 }
 
 .monitor-panel {
@@ -2079,6 +2128,7 @@ button {
   border-radius: var(--radius-xl);
   padding: 28px;
   box-shadow: var(--shadow-dark);
+  width: 100%;
 }
 
 .monitor-header {
@@ -2148,6 +2198,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   margin-top: 1.75rem;
+  width: 100%;
 }
 
 .reading-card {
@@ -2155,6 +2206,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   padding: 18px;
+  width: 100%;
 }
 
 .reading-icon {
@@ -2217,6 +2269,7 @@ button {
   margin-top: 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .chart-labels {
@@ -2293,6 +2346,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin-top: 1.75rem;
+  width: 100%;
 }
 
 .measurement-card {
@@ -2300,6 +2354,7 @@ button {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 18px;
+  width: 100%;
 }
 
 .measure-number {
@@ -2328,13 +2383,14 @@ button {
   margin: 0;
 }
 
-/* Closing Callout */
+/* Closing Callout (100% Full Width) */
 .closing-section {
   background: linear-gradient(135deg, var(--bg-dark) 0%, #0f1f38 100%);
   color: var(--text-on-dark);
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 4.5rem 1.75rem;
   border-top: 1px solid var(--bg-dark-border);
+  width: 100%;
 }
 
 .closing-mark {
@@ -2353,7 +2409,7 @@ button {
 }
 
 .closing-section h2 {
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 12px 0 16px;
@@ -2366,7 +2422,7 @@ button {
 
 .closing-copy {
   color: var(--text-on-dark-muted);
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   font-size: 15px;
   line-height: 1.6;
@@ -2381,16 +2437,18 @@ button {
   flex-wrap: wrap;
 }
 
+/* Footer (Edge-to-edge 100%) */
 .site-footer {
   background: #05080f;
   color: #64748b;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
 .footer-container {
-  max-width: 1600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2444,7 +2502,7 @@ button {
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .hero-grid { grid-template-columns: 1fr; }
   .environment-grid { grid-template-columns: 1fr 1fr; }
   .large-card { grid-column: span 2; }
@@ -2453,7 +2511,7 @@ button {
   .module-layout { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .signal-grid { grid-template-columns: repeat(2, 1fr); }
   .monitor-readings { grid-template-columns: repeat(2, 1fr); }
   .measurement-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2464,10 +2522,10 @@ button {
 }
 
 @media (max-width: 600px) {
-  .section-block { padding: 3.5rem 1.25rem; }
+  .section-block { padding: 2.5rem 1rem; }
   .hero-proof { grid-template-columns: 1fr; }
   .signal-grid { grid-template-columns: 1fr; }
-  .species-tabs { flex-direction: column; }
+  .species-tabs { grid-template-columns: 1fr; }
   .metric-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: repeat(2, 1fr); }
   .recipe-row { grid-template-columns: 35px 1fr 60px; }
