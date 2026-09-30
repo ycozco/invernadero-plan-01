@@ -7,7 +7,7 @@
     "scientificName": "Duranta erecta",
     "category": "Especie · 01",
     "tone": "duranta",
-    "image": {"src":"/assets/images/plants/duranta-erecta.jpg","alt":"Racimos de flores violetas de Duranta erecta entre follaje verde.","width":1000,"height":750,"author":"Horologium","authorUrl":"https://commons.wikimedia.org/wiki/User:Horologium","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+    "image": {"src":"/assets/images/plants/duranta-erecta.jpg","alt":"Racimos de flores violetas de Duranta erecta entre follaje verde.","width":1000,"height":750,"author":"Horologium","authorUrl":"https://commons.wikimedia.org/wiki/User:Horologium","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","note":"Imagen de referencia de la especie."},
     "status": "Evidencia específica disponible",
     "summary": "Comparar el efecto del ácido indolbutírico y del medio de enraizamiento en esquejes apicales.",
     "identity": "Duranta erecta",
@@ -18,6 +18,10 @@
     "protocol": ["Seleccionar material apical sano y homogéneo; anotar planta madre y fecha.", "Asignar los esquejes a tratamientos antes de aplicar el AIB.", "Registrar composición del medio, condiciones y eventos de humedad.", "Evaluar supervivencia y raíces por esqueje en fechas previamente definidas."],
     "measurements": ["Supervivencia (%)", "Esquejes con raíz / evaluados", "Número y longitud de raíces", "Días hasta la primera evaluación"],
     "sourceIds": ["shiri-duranta-2019", "ufifas-propagation", "duranta-seeds-secondary", "silva-duranta-2026", "ncsu-substrates"],
+    "methods": [
+      {"name":"Esquejes apicales blandos","evidence":"Ensayo en invernadero · Shiri et al. (2019)","details":["360 esquejes de unos 10 cm, con al menos 2 yemas; sin botones florales.","AIB en polvo: 0, 2500, 5000 o 7500 ppm; base tratada durante 10 s.","Arena de río, corteza de pino o turba:perlita 1:1; riego por aspersión 15 min, dos veces al día.","Tres repeticiones de 10 esquejes por unidad; evaluación a las 7 semanas."],"finding":"5000 ppm dio la supervivencia media mayor (81,85%) y buenos resultados generales de raíces y brotes. La corteza de pino favoreció supervivencia y número de brotes.","limit":"81,85% es supervivencia, no porcentaje de enraizamiento. El artículo no informa temperatura del invernadero; el resultado no valida una receta para San Camilo.","url":"https://doi.org/10.5897/AJPS2019.1851","citation":"Shiri et al. · African Journal of Plant Science, 2019","kind":"Estudio específico"},
+      {"name":"Semilla fresca","evidence":"Dato secundario · Lorenzi (2009), compilado por Useful Tropical Plants","details":["Semilla recién madura, sembrada pronto en vivero y con sombra parcial.","La compilación reporta menos de 20% de germinación y emergencia a los 90–110 días."],"finding":"Sirve para anticipar germinación potencialmente lenta y baja; considerar seguimiento de varios meses.","limit":"No se localizó el ensayo primario ni sus condiciones, muestra o procedencia. Usar como referencia orientativa, no como tasa garantizada.","url":"https://tropical.theferns.info/viewtropical.php?id=Duranta+erecta","citation":"Useful Tropical Plants · cita a Lorenzi, 2009","kind":"Evidencia secundaria"}
+    ],
     "caveat": "Las dosis y resultados publicados corresponden a las condiciones de cada estudio. No deben presentarse como una receta validada para San Camilo."
   },
   {
@@ -39,6 +43,10 @@
     "protocol": ["Identificar especie, variedad y planta madre antes del corte.", "Registrar tipo de esqueje, tamaño, hojas y hora de recolección.", "Mantener por separado las condiciones propuestas de los resultados observados.", "Definir el calendario de evaluación con el responsable del ensayo."],
     "measurements": ["Supervivencia por lote", "Enraizamiento / esquejes evaluados", "Fecha y etapa de evaluación", "Condiciones registradas durante el ensayo"],
     "sourceIds": ["lantana-seed-dormancy", "lantana-cuttings-2022", "lantana-iba-2021", "zhang-lantana-2014", "msu-moisture-2018", "umass-mist-fog"],
+    "methods": [
+      {"name":"Esquejes semileñosos · ‘Little Lucky’","evidence":"Ensayo de invernadero · Loconsole et al. (2022)","details":["Esquejes de 5–6 cm y 3 nudos; sin hojas basales, con 6 hojas conservadas.","Turba y perlita 80:20; sombreo 50%; aire a 12–20 °C y cama radicular a 18 ± 1 °C.","Nebulización de 60 s cada 20 min entre 8:00 y 15:00; seguimiento durante 50 días.","Comparación: control, AIB 1250 mg/L y extracto de alga en 3 concentraciones."],"finding":"A los 50 días: 80,7 ± 2,9% enraizado en el control y 91,7 ± 0,9% con AIB 1250 mg/L.","limit":"Un solo cultivar ornamental y un invernadero comercial en Italia. No es un óptimo universal ni equivale a las condiciones locales.","url":"https://doi.org/10.3390/horticulturae8090806","citation":"Loconsole et al. · Horticulturae, 2022","kind":"Estudio específico"},
+      {"name":"Semillas y dormancia","evidence":"Ensayo de germinación · Wijayabandara et al. (2013)","details":["Dos procedencias de Sri Lanka; ensayo cercano a 27–28 °C y observación durante 30 días.","Semillas frescas intactas o escarificadas, con luz/oscuridad; también GA₃ a 100 y 500 ppm.","Intactas y escarificadas sin hormona: 0% de germinación en ese periodo."],"finding":"Con GA₃, germinación baja y variable: máximos informados de 18% y 20% según procedencia y tratamiento.","limit":"La escarificación sola no rompió la dormancia. Procedencia y lote influyen; no recomendar un tratamiento único a partir de este ensayo.","url":"https://www.isca.in/IJBS/Archive/v2/i1/2.ISCA-JBS-2012-130.pdf","citation":"Wijayabandara et al. · IRJBS, 2013","kind":"Estudio específico"}
+    ],
     "caveat": "No se asigna un rango óptimo de enraizamiento a partir del estudio de tolerancia al calentamiento."
   },
   {
@@ -49,6 +57,7 @@
     "scientificName": "Myoporum sp.",
     "category": "Identificación · pendiente",
     "tone": "mioporo",
+    "image": {"src":"/assets/images/plants/myoporum-laetum-reference.jpg","alt":"Ejemplar de Myoporum laetum fotografiado en una colección botánica de Auckland; imagen comparativa, no identifica el mioporo de San Camilo.","width":1536,"height":2048,"author":"Auckland Museum","authorUrl":"https://commons.wikimedia.org/wiki/File:Myoporum_laetum_G.Forst._(AM_AK299065).jpg","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0/","note":"Foto comparativa de M. laetum; la identidad de la planta madre local sigue pendiente."},
     "status": "Identificar especie antes de fijar protocolo",
     "summary": "Conservar la incertidumbre taxonómica y registrar la identificación antes de asociar estudios o recomendaciones.",
     "identity": "Myoporum sp.",
@@ -59,6 +68,10 @@
     "protocol": ["Fotografiar la planta madre, hojas, tallos y flores o frutos disponibles.", "Anotar procedencia, nombre local y rasgos del material.", "Pedir confirmación taxonómica antes de seleccionar fuentes por especie.", "Registrar el piloto como exploratorio mientras se completa la identificación."],
     "measurements": ["Planta madre y procedencia", "Rasgos e imágenes de identificación", "Esquejes asignados y supervivientes", "Enraizamiento observado por fecha"],
     "sourceIds": ["kew-powo", "kew-myoporum-acuminatum", "kew-myoporum-insulare", "serfor-myoporum-acuminatum", "miraflores-myoporum-laetum", "unjbg-myoporum-serratum", "burrows-myoporum-seed-1996", "nzpcn-myoporum-laetum", "anpsa-myoporum-cuttings"],
+    "methods": [
+      {"name":"Semilla · Myoporum laetum","evidence":"Ensayo de germinación · Burrows (1996)","details":["Semilla limpia de fruto fresco; humedad y buena luz en invernadero parcialmente sombreado y sin calefacción.","Primera germinación alrededor del quinto mes; seguimiento prolongado de cohortes.","Semillas dentro del fruto no germinaron; abrir el endocarpo dio una velocidad similar a la semilla limpia."],"finding":"El total acumulado llegó a 90%, distribuido de forma escalonada hasta cinco años.","limit":"Resultado exclusivo de M. laetum en Nueva Zelanda. No extrapolar a M. acuminatum ni cerrar el ensayo local a las pocas semanas.","url":"https://doi.org/10.1080/0028825X.1996.10410685","citation":"Burrows · New Zealand Journal of Botany, 1996","kind":"Estudio específico · otra especie"},
+      {"name":"Esquejes semileñosos","evidence":"Ficha de conservación · NZPCN / referencia de vivero ANPSA","details":["Para M. laetum, NZPCN describe propagación por semilla fresca y esquejes semileñosos.","ANPSA ofrece para Myoporum australianos cortes de 7,5–10 cm de madera endurecida de la temporada y retirar hojas de la parte inferior."],"finding":"Son referencias útiles para diseñar una pequeña comparación exploratoria por tipo de madera, con control sin hormona.","limit":"No se localizó un ensayo abierto con tasas para M. acuminatum de Arequipa o para el ejemplar de San Camilo. La guía ANPSA es genérica; identificar primero la planta.","url":"https://www.nzpcn.org.nz/flora/species/myoporum-laetum/","citation":"NZPCN · Myoporum laetum","additionalUrl":"https://anpsa.org.au/genera/eremophila-and-relatives/","additionalCitation":"ANPSA · Myoporum australianos","kind":"Guía; aplicabilidad limitada"}
+    ],
     "caveat": "La ficha permanece identificada como Myoporum sp.; los estudios de una especie no se extrapolan automáticamente a todo el género."
   }
 ]

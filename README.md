@@ -1,6 +1,6 @@
 # Decolumax · San Camilo
 
-Micrositio editorial para documentar un piloto de propagación experimental. La portada presenta el proyecto; el catálogo conduce a páginas independientes por planta, con estado de identificación, preguntas, procedimiento de registro, mediciones por evaluar y fuentes relacionadas.
+Micrositio editorial para documentar un piloto de propagación experimental. La portada presenta el proyecto; el catálogo conduce a páginas independientes por planta, con estado de identificación, preguntas, procedimiento de registro, métodos de propagación publicados, mediciones por evaluar y fuentes relacionadas.
 
 ## Desarrollo
 
@@ -23,16 +23,18 @@ Las vistas públicas funcionan como archivos estáticos: no requieren servidor N
 
 ## Añadir una planta
 
-1. Agregar un objeto a `src/_data/plants.json` con un `slug` único, nombres, estado de identificación, preguntas, procedimiento y mediciones.
+1. Agregar un objeto a `src/_data/plants.json` con un `slug` único, nombres, estado de identificación, preguntas, procedimiento, métodos publicados (`methods`) y mediciones.
 2. Añadir a `sourceIds` únicamente fuentes que respalden el alcance descrito y registrar esas fuentes en `src/_data/sources.json`.
-3. Para una fotografía, colocar el archivo en `src/assets/images/plants/` e incluir texto alternativo, autor, origen y licencia en el objeto `image`.
+3. Para una fotografía, colocar el archivo en `src/assets/images/plants/` e incluir texto alternativo, autor, origen, licencia y nota de contexto en el objeto `image`.
 4. Ejecutar `npm run build`. Eleventy crea automáticamente `/plantas/<slug>/` desde la plantilla compartida.
 
 La identidad del sitio se configura en `src/_data/site.json`; las plantillas y estilos están en `src/_includes/` y `src/assets/css/site.css`.
 
 ## Contenido y alcance
 
-- Duranta y Lantana incluyen fotos botánicas de referencia con autor y licencia atribuidos. No son documentación fotográfica del piloto.
+- Las tres fichas incluyen fotos botánicas de referencia con autor y licencia atribuidos. La imagen de Myoporum corresponde a *M. laetum* y se identifica como comparativa; no confirma la especie local ni documenta el piloto.
+- Cada ficha presenta tarjetas reutilizables para los métodos publicados: diseño, dimensiones de muestra, condiciones, resultados y límites de aplicación. Separa semilla de esquejes cuando hay evidencia disponible.
+- El diseño de ficha usa un lienzo ancho adaptable: columnas editoriales en escritorio, tarjetas amplias para métodos y fuentes, y una columna en móvil.
 - Myoporum se mantiene como `Myoporum sp.` hasta resolver su identificación; la fuente de taxonomía no respalda una especie local concreta.
 - No se publican resultados locales ni lecturas de sensores. La página de mediciones declara esta ausencia.
 - Las fuentes se comparten desde un único archivo de datos y se muestran en la página general y en las fichas pertinentes.
@@ -44,6 +46,8 @@ La identidad del sitio se configura en `src/_data/site.json`; las plantillas y e
 - [Plan de identidad y arquitectura](docs/plan-identidad-y-arquitectura.md)
 - [Referencias técnicas, visuales y de implementación](docs/referencias-y-busqueda.md)
 - [Investigación de propagación por especie](docs/investigacion-propagacion-por-especie.md): semillas, esquejes, condiciones de estudio y pendientes para Duranta, Lantana y Myoporum.
+
+El detalle de los estudios vive en `methods` dentro de `src/_data/plants.json`; la plantilla común de `src/plantas.njk` lo distribuye en las fichas individuales. Para resumir resultados, conservar explícitamente el tipo de evidencia y sus límites.
 
 ## GitHub Pages
 

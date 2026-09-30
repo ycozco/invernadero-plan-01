@@ -2,13 +2,23 @@
 
 Fecha: 28 de septiembre de 2026 · Versión: propuesta 1.0
 
-Estado: primera implementación realizada; quedan verificaciones de contenido, revisión visual accesible y publicación. No implica que existan conexiones a sensores ni datos experimentales reales. La investigación inicial está en [Referencias y búsqueda](referencias-y-busqueda.md).
+Estado: implementación de fichas y primera revisión visual adaptable completadas; quedan verificaciones de accesibilidad, contraste, enlaces y publicación. No implica que existan conexiones a sensores ni datos experimentales reales. La investigación por especie está en [Investigación de propagación](investigacion-propagacion-por-especie.md).
+
+## Avance de fichas y distribución · 29 de septiembre de 2026
+
+Se corrigió la distribución observada en escritorio: el lienzo general pasó de 1240 px a 1840 px, y el contenido de las fichas ahora crece junto al viewport en vez de quedar fijado en 760 px. En escritorio la barra de ficha mantiene su columna propia y los métodos y fuentes se disponen en tarjetas; en móvil regresan a una columna. Se limitaron las líneas de lectura de los párrafos y del procedimiento para conservar legibilidad dentro del lienzo ampliado.
+
+La ficha común incorporó una sección que separa semilla, esquejes, condiciones del estudio, resultado y límite de aplicación. Duranta muestra el ensayo de Shiri et al. y la referencia secundaria de semilla; Lantana presenta germinación y esquejes del cultivar estudiado; Mioporum deja explícito qué evidencia pertenece solo a *M. laetum* y qué guías son genéricas. La fotografía comparativa de Myoporum lleva crédito y licencia CC BY 4.0 y no se presenta como identificación del ejemplar local. La plantilla y los datos siguen siendo reutilizables al añadir especies.
+
+**Verificación de esta iteración:** compilación de Eleventy con el prefijo `/invernadero-plan-01/`; revisión visual local de Mioporum en escritorio y de ficha/métodos en móvil; comprobación de que el documento no desborda horizontalmente a 390 px. Esto comprueba el build y la vista local, no confirma el despliegue de GitHub Pages ni valida las condiciones en San Camilo.
+
+**Pendiente:** obtener fotos diagnósticas de la planta madre de Mioporum y confirmar su especie; decidir los protocolos locales antes de llamarlos recetas; incorporar mediciones y resultados de campo cuando existan; revisar contraste, teclado, foco, enlaces y rendimiento; comprobar la página desplegada después de publicar.
 
 ## Avance de implementación · 28 de septiembre de 2026
 
 **Hecho en esta iteración:** Eleventy genera `dist/` y acepta `SITE_PATH_PREFIX`; se crearon portada y rutas propias para catálogo, Duranta, Lantana, Myoporum sp., módulo, método, mediciones y evidencia. La identidad Decolumax · San Camilo se centralizó en `src/_data/site.json`. Plantas y referencias viven en archivos de datos separados; las fichas se generan desde una plantilla común. El workflow de Pages compila con `/invernadero-plan-01/` y publica solo `dist/`.
 
-La dirección visual ya está expresada en `src/assets/css/site.css`: papel cálido, verde botánico y terracota; Source Serif 4, Source Sans 3 e IBM Plex Mono locales; jerarquía editorial adaptable; fotografías de referencia con créditos y licencias; movimiento explicativo en el diagrama y soporte de `prefers-reduced-motion`. El contenido señala cuando la identificación, el protocolo o las mediciones locales no están confirmados.
+La dirección visual está expresada en `src/assets/css/site.css`: papel cálido, verde botánico y terracota; Source Serif 4, Source Sans 3 e IBM Plex Mono locales; jerarquía editorial adaptable; fotografías de referencia con créditos y licencias; movimiento explicativo en el diagrama y soporte de `prefers-reduced-motion`. La ficha se amplió para aprovechar el ancho disponible y presentar métodos en tarjetas comparables. El contenido señala cuando la identificación, el protocolo o las mediciones locales no están confirmados.
 
 **Pendiente:** contrastar la evidencia completa por especie y las fuentes aún candidatas; confirmar ubicación, protocolo aprobado, sensores y datos de campo; identificar Myoporum a nivel de especie y consultar si existe manual/logotipo que preservar; sustituir imágenes de referencia por fotos del piloto si se obtienen; revisar interacción, contraste, teclado, tamaños, rendimiento y enlaces en móvil y escritorio; confirmar configuración y resultado real de Pages. Las fotos actuales no documentan el piloto.
 
