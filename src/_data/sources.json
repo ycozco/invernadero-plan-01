@@ -54,5 +54,109 @@
     "citation": "Royal Botanic Gardens, Kew",
     "scope": "Catálogo para verificar nombres científicos aceptados una vez identificada la especie. No permite resolver por sí solo qué planta local se llama «mioporo».",
     "url": "https://powo.science.kew.org/results?q=Myoporum"
+  },
+  {
+    "id": "kew-myoporum-acuminatum",
+    "category": "Myoporum · nombre aceptado",
+    "title": "Myoporum acuminatum · nombre aceptado",
+    "citation": "Royal Botanic Gardens, Kew · Plants of the World Online",
+    "scope": "Kew acepta M. acuminatum y registra «mioporo» entre nombres comunes; esto no identifica la planta madre específica del proyecto.",
+    "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:585257-1"
+  },
+  {
+    "id": "ufifas-propagation",
+    "category": "Duranta · guía de extensión",
+    "title": "Plant Propagation Techniques for the Florida Gardener",
+    "citation": "UF/IFAS Extension · EDIS",
+    "scope": "Incluye Duranta erecta: siembra en primavera y esqueje de madera suave. La guía no cuantifica germinación ni un óptimo de temperatura específico para Duranta.",
+    "url": "https://ask.ifas.ufl.edu/publication/MG108"
+  },
+  {
+    "id": "duranta-seeds-secondary",
+    "category": "Duranta · semilla",
+    "title": "Duranta erecta · Useful Tropical Plants Database",
+    "citation": "Ken Fern · cita a Lorenzi, Brazilian Trees, vol. 3 (2009)",
+    "scope": "Compilación secundaria: semilla madura sembrada pronto, sombra parcial, germinación reportada menor a 20% en 90–110 días. No se localizó el ensayo primario citado.",
+    "url": "https://tropical.theferns.info/viewtropical.php?id=Duranta+erecta"
+  },
+  {
+    "id": "lantana-seed-dormancy",
+    "category": "Lantana · dormancia de semilla",
+    "title": "Seed Dormancy, Storage Behavior and Germination of Lantana camara",
+    "citation": "Wijayabandara, Jayasuriya y Jayasinghe · International Research Journal of Biological Sciences, 2013",
+    "scope": "Ensayo de semillas de dos procedencias de Sri Lanka: escarificación sola no quebró la dormancia; GA₃ dio germinación baja y variable, hasta 18–20% según lote y tratamiento.",
+    "url": "https://www.isca.in/IJBS/Archive/v2/i1/2.ISCA-JBS-2012-130.pdf"
+  },
+  {
+    "id": "lantana-cuttings-2022",
+    "category": "Lantana · esquejes",
+    "title": "Improving Aerial and Root Quality Traits of Two Landscaping Shrubs Stem Cuttings",
+    "citation": "Loconsole et al. · Horticulturae, 2022",
+    "scope": "Ensayo con Lantana camara ‘Little Lucky’: esquejes semileñosos, turba:perlita, 12–20 °C aire, 18 ± 1 °C en cama y nebulización; 80.7% control y 91.7% con AIB 1250 mg/L a 50 días.",
+    "url": "https://doi.org/10.3390/horticulturae8090806"
+  },
+  {
+    "id": "lantana-iba-2021",
+    "category": "Lantana · respuesta varietal a AIB",
+    "title": "Effects of different auxin (IBA) concentrations on rooting of Lantana camara cuttings",
+    "citation": "Loconsole, De Lucia y Cristiano · resumen en actas, 2021",
+    "scope": "Resumen de congreso con dos cultivares; el efecto de 1–2% AIB en arquitectura radicular varió por cultivar. Evidencia complementaria, no artículo completo de libre acceso.",
+    "url": "https://ricerca.uniba.it/handle/11586/494920"
+  },
+  {
+    "id": "serfor-myoporum-acuminatum",
+    "category": "Myoporum · identificación en Arequipa",
+    "title": "Plantación urbana identifica el mioporo como Myoporum acuminatum",
+    "citation": "SERFOR · Arequipa, 2024",
+    "scope": "Registro oficial de una plantación urbana local de M. acuminatum. Hace relevante esa especie como hipótesis regional, pero no identifica automáticamente la planta madre del proyecto.",
+    "url": "https://www.gob.pe/institucion/serfor/noticias/970277-arequipa-serfor-y-alumnos-de-la-utp-instalaron-100-ejemplares-de-mioporo-como-cercos-vivos-en-la-avenida-tacna-y-arica"
+  },
+  {
+    "id": "miraflores-myoporum-laetum",
+    "category": "Myoporum · identificación en Lima",
+    "title": "Ficha municipal del mioporo como Myoporum laetum",
+    "citation": "Municipalidad Distrital de Miraflores",
+    "scope": "Referencia municipal de Lima que aplica el nombre común mioporo a M. laetum; ilustra la ambigüedad regional del nombre común.",
+    "url": "https://www.miraflores.gob.pe/parque-bicentenario/mioporo/"
+  },
+  {
+    "id": "unjbg-myoporum-serratum",
+    "category": "Myoporum · identificación en Tacna",
+    "title": "Catálogo de especies de parques de Tacna: Myoporum serratum",
+    "citation": "Universidad Nacional Jorge Basadre Grohmann · Ciencia & Desarrollo",
+    "scope": "El catálogo local registra M. serratum con nombre común «Mioporo»; Kew incluye ese nombre entre sinónimos de M. insulare. Confirmar la identidad del ejemplar y el nombre aceptado.",
+    "url": "https://revistas.unjbg.edu.pe/index.php/cyd/article/download/40/34/54"
+  },
+  {
+    "id": "kew-myoporum-insulare",
+    "category": "Myoporum · actualización taxonómica",
+    "title": "Myoporum insulare · especie aceptada y sinónimos",
+    "citation": "Royal Botanic Gardens, Kew · Plants of the World Online",
+    "scope": "POWO acepta M. insulare e incluye M. serratum entre sus sinónimos; tomar en cuenta al interpretar el catálogo antiguo de Tacna.",
+    "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:585290-1"
+  },
+  {
+    "id": "burrows-myoporum-seed-1996",
+    "category": "Myoporum laetum · germinación",
+    "title": "Germination behaviour of seeds of New Zealand woody species",
+    "citation": "C. J. Burrows · New Zealand Journal of Botany, 1996",
+    "scope": "Para M. laetum: lote limpio, húmedo y con luz; primera germinación cerca de cinco meses, 90% final distribuido hasta cinco años. No extrapolar directamente a M. acuminatum.",
+    "url": "https://doi.org/10.1080/0028825X.1996.10410685"
+  },
+  {
+    "id": "nzpcn-myoporum-laetum",
+    "category": "Myoporum laetum · propagación",
+    "title": "Myoporum laetum · perfil de conservación y taxonomía",
+    "citation": "New Zealand Plant Conservation Network",
+    "scope": "Describe propagación con semilla fresca y esquejes semileñosos; advierte que el stock vendido con ese nombre puede incluir taxones afines o híbridos.",
+    "url": "https://www.nzpcn.org.nz/flora/species/myoporum-laetum/"
+  },
+  {
+    "id": "anpsa-myoporum-cuttings",
+    "category": "Myoporum · esquejes, guía de vivero",
+    "title": "Eremophila and related genera",
+    "citation": "Australian Native Plants Society Australia",
+    "scope": "Guía general para Myoporum australianos: esquejes de crecimiento endurecido de la temporada; no es una dosis validada específicamente para la planta de San Camilo.",
+    "url": "https://anpsa.org.au/genera/eremophila-and-relatives/"
   }
 ]

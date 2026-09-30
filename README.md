@@ -43,6 +43,7 @@ La identidad del sitio se configura en `src/_data/site.json`; las plantillas y e
 
 - [Plan de identidad y arquitectura](docs/plan-identidad-y-arquitectura.md)
 - [Referencias técnicas, visuales y de implementación](docs/referencias-y-busqueda.md)
+- [Investigación de propagación por especie](docs/investigacion-propagacion-por-especie.md): semillas, esquejes, condiciones de estudio y pendientes para Duranta, Lantana y Myoporum.
 
 ## GitHub Pages
 

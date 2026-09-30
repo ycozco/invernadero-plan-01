@@ -2,6 +2,8 @@
 
 Consulta inicial: 28 de septiembre de 2026. Complementa el [plan de identidad y arquitectura](plan-identidad-y-arquitectura.md).
 
+La búsqueda agronómica se amplió el 29 de septiembre de 2026. Los métodos y límites por especie, incluida la ambigüedad peruana del nombre «mioporo», están consolidados en [Investigación de propagación por especie](investigacion-propagacion-por-especie.md).
+
 Estados: **revisada** = página/documentación consultada; **candidata** = recurso localizado que necesita evaluación más profunda; **prototipo pendiente** = no se ha instalado ni probado en este proyecto. Se incorporaron tipografías con licencias OFL y dos fotografías botánicas de Wikimedia Commons, cada una con atribución y enlace de licencia en la ficha; no se copiaron código ni componentes visuales de los repositorios citados.
 
 ## 1. Identidad, fichas e imágenes
