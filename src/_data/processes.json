@@ -2,6 +2,8 @@
   "duranta-erecta": [
     {
       "title": "Esqueje apical · ensayo publicado",
+      "illustration": "duranta-esqueje.svg",
+      "illustrationCaption": "Basado en Shiri et al. (2019). Dibujo esquemático; no a escala.",
       "context": "Resumen del ensayo de Shiri et al. (2019), no una receta validada en San Camilo. La supervivencia reportada no debe confundirse con el porcentaje de esquejes enraizados.",
       "steps": [
         {"title":"Planifica los tratamientos","detail":"Prepara 360 unidades experimentales, distribuidas en 3 repeticiones de 10 por combinación. Define de antemano medio y concentración de AIB (0, 2500, 5000 o 7500 ppm) y etiqueta cada lote."},
@@ -14,6 +16,8 @@
     },
     {
       "title": "Semilla fresca · referencia secundaria",
+      "illustration": "duranta-semilla.svg",
+      "illustrationCaption": "Referencia secundaria que cita a Lorenzi (2009). Dibujo esquemático; no a escala.",
       "context": "La referencia secundaria resume un dato de Lorenzi (2009), pero no expone el ensayo primario ni su tamaño de muestra. Úsalo solo para diseñar observaciones exploratorias.",
       "steps": [
         {"title":"Registra el lote","detail":"Identifica planta madre, fecha de madurez del fruto, procedencia y cantidad. Conserva por separado los lotes para que la procedencia no se mezcle."},
@@ -26,6 +30,8 @@
   "lantana-camara": [
     {
       "title": "Esqueje semileñoso · ‘Little Lucky’",
+      "illustration": "lantana-esqueje.svg",
+      "illustrationCaption": "Basado en Loconsole et al. (2022), cultivar ‘Little Lucky’. Dibujo esquemático; no a escala.",
       "context": "Loconsole et al. (2022) ensayaron un cultivar ornamental en Italia. Mantén las condiciones y resultados como referencia comparativa; no como óptimo universal para Lantana local.",
       "steps": [
         {"title":"Identifica y asigna","detail":"Registra especie, cultivar, planta madre y fecha. El estudio usó 15 plantas madre y asignó 405 esquejes a control, AIB o extracto de algas con réplicas experimentales."},
@@ -38,6 +44,8 @@
     },
     {
       "title": "Respuesta a luz · tres cultivares en Nicaragua",
+      "illustration": "lantana-luz.svg",
+      "illustrationCaption": "Basado en Castro Castro y Aguilar Maradiaga (2024). Dibujo esquemático; no a escala.",
       "context": "Castro Castro y Aguilar Maradiaga (2024) compararon 54, 130 y 200 µmol m⁻² s⁻¹ durante tres semanas. La respuesta varió entre cultivares; 130 no es una recomendación universal.",
       "steps": [
         {"title":"Separa las variedades","detail":"Identifica ‘Copo de oro’, ‘Sonrisa de rosa’ o ‘Pequeña amarilla’ y registra cada planta madre. No mezcles los cultivares en el análisis."},
@@ -49,6 +57,8 @@
     },
     {
       "title": "Semilla · ensayo de dormancia",
+      "illustration": "lantana-semilla.svg",
+      "illustrationCaption": "Basado en Wijayabandara et al. (2013). Dibujo esquemático; no a escala.",
       "context": "Wijayabandara et al. (2013) estudiaron lotes de Sri Lanka cerca de 27–28 °C durante 30 días. El tratamiento con GA₃ produjo respuestas bajas y variables; esta evidencia no establece receta de vivero.",
       "steps": [
         {"title":"Divide por procedencia","detail":"Identifica los dos orígenes del estudio y conserva la trazabilidad de cada lote. La procedencia puede influir en la respuesta."},
@@ -61,6 +71,8 @@
   "mioporo": [
     {
       "title": "Primero: identifica la planta madre",
+      "illustration": "mioporo-identificacion.svg",
+      "illustrationCaption": "Guía de documentación del ejemplar local; no confirma su especie. Dibujo esquemático.",
       "context": "La ficha local sigue como Myoporum sp. ‘Mioporo’ se aplica regionalmente a más de una especie. No atribuyas los resultados de M. laetum a la planta de San Camilo sin identificación.",
       "steps": [
         {"title":"Documenta el ejemplar","detail":"Fotografía la planta completa, hojas por ambas caras, ramillas, flores y frutos disponibles. Incluye escala y fecha para que los rasgos se puedan revisar."},
@@ -71,6 +83,8 @@
     },
     {
       "title": "Semilla · estudio de Myoporum laetum",
+      "illustration": "mioporo-semilla.svg",
+      "illustrationCaption": "Basado en Burrows (1996), solo para Myoporum laetum. Dibujo esquemático; no a escala.",
       "context": "Burrows (1996) estudió M. laetum en Nueva Zelanda. Este es un calendario de observación de esa especie y procedencia; la germinación puede tardar años.",
       "steps": [
         {"title":"Limpia y etiqueta semilla madura","detail":"Separa la semilla del fruto y conserva la identidad de la planta madre. En el ensayo, las semillas contenidas en el fruto no germinaron."},
@@ -81,6 +95,8 @@
     },
     {
       "title": "Esquejes · piloto exploratorio por identificar",
+      "illustration": "mioporo-esqueje.svg",
+      "illustrationCaption": "Flujo propuesto para un piloto después de identificar la especie; no es protocolo validado.",
       "context": "Guías de M. laetum y Myoporum australianos mencionan esquejes semileñosos o madera endurecida, pero no se hallaron tasas específicas para el ejemplar local. Diseña un piloto después de confirmar identidad.",
       "steps": [
         {"title":"Confirma identidad y material","detail":"Antes de cortar, identifica especie, planta madre y estado fenológico. Registra si el material es tierno, semileñoso o endurecido."},

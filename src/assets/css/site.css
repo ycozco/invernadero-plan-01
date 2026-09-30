@@ -346,14 +346,23 @@ h2 { margin: 0; font-size: clamp(39px, 5vw, 58px); line-height: 1.06; }
 .process-controls button { min-height: 42px; padding: 8px 13px; border: 1px solid var(--line-dark); background: var(--surface); color: var(--ink); font: 600 13px var(--font-sans); cursor: pointer; }
 .process-controls button:first-child { border-color: var(--green); background: var(--green); color: var(--green-dark); }
 .process-controls button:hover { border-color: var(--green); }
+.process-controls button[hidden] { display: none; }
+.process-workbench { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(18px, 2.4vw, 34px); align-items: start; margin-top: 20px; }
+.process-illustration { position: sticky; top: 20px; min-width: 0; margin: 0; padding: 10px; border: 1px solid var(--line); background: var(--green-dark); }
+.process-illustration img, .process-diagram { display: block; width: 100%; height: auto; }
+.process-illustration figcaption { padding: 8px 5px 1px; color: var(--faint); font-size: 11px; line-height: 1.4; }
 .process-context { margin: 20px 0 24px; padding: 16px 18px; border-left: 3px solid var(--terracotta); background: var(--warm-surface); color: var(--ink); font-size: 14px; }
 .process-steps { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
-.process-step { display: grid; grid-template-columns: 48px 1fr; gap: 17px; align-items: start; padding: 18px 19px; border: 1px solid var(--line); background: var(--surface); }
+.process-step { display: grid; grid-template-columns: 48px 1fr; gap: 17px; align-items: start; padding: 18px 19px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; transition: border-color .2s ease, background-color .2s ease; }
+.process-step:hover, .process-step.is-active { border-color: var(--green); background: var(--positive-surface); }
+.process-step:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .process-step__number { color: var(--green); font: 500 24px/1.25 var(--font-serif); }
 .process-step h3 { margin: 0 0 5px; font: 500 20px/1.25 var(--font-serif); }
 .process-step p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .process-status { min-height: 1.5em; margin: 12px 0 0; color: var(--faint); font: 11px/1.5 var(--font-mono); }
 @media (max-width: 560px) { .process-toolbar { grid-template-columns: 1fr; }.process-controls { grid-column: auto; }.process-step { grid-template-columns: 34px 1fr; gap: 12px; padding: 15px 13px; }.process-step__number { font-size: 20px; }.process-step h3 { font-size: 18px; } }
+@media (max-width: 920px) { .process-workbench { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 16px; }.process-step { grid-template-columns: 36px 1fr; gap: 12px; padding: 15px; } }
+@media (max-width: 680px) { .process-workbench { grid-template-columns: 1fr; }.process-illustration { position: static; }.process-workbench__steps { min-width: 0; } }
 .source-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr)); gap: 16px; }
 .source-card { display: flex; flex-direction: column; padding: 20px; }
 .source-card h3 { font-size: 22px; }

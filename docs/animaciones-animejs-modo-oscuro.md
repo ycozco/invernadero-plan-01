@@ -10,7 +10,7 @@ La ficha importa `createTimeline` desde ese archivo local. Según la [documentac
 
 ## Qué significa la guía animada
 
-La lista completa de pasos y su contexto se entrega desde Nunjucks/JSON al generar cada página. Cada vía (semilla, esqueje, manejo de luz o identificación) puede seleccionarse; la animación únicamente resalta cada tarjeta en orden. Los datos permanecen en la página incluso con JavaScript desactivado. El movimiento es una capa de orientación: nunca revela información que estuviera oculta, sustituye mediciones ni transforma un protocolo bibliográfico en receta local.
+La lista completa de pasos y su contexto se entrega desde Nunjucks/JSON al generar cada página. Cada vía (semilla, esqueje, manejo de luz o identificación) puede seleccionarse; al cambiarla se carga una lámina SVG original, su crédito y su secuencia de pasos. Las ilustraciones resumen protocolos de corte, preparación basal, bandejas, mediciones y evaluación, y señalan el panel asociado al paso activo. También se puede elegir una tarjeta directamente o avanzar/anterior sin reproducir todo el recorrido. Las láminas son esquemas, no están a escala ni sustituyen las fotografías de identificación. Los datos permanecen en la página incluso con JavaScript desactivado. El movimiento es una capa de orientación: nunca revela información que estuviera oculta, sustituye mediciones ni transforma un protocolo bibliográfico en receta local.
 
 Las fichas detallan en palabras las operaciones, cantidades, condiciones, fechas de evaluación y límites de extrapolación. En particular: supervivencia de Duranta no equivale a enraizamiento; los resultados de Lantana se separan por estudio/cultivar; y el proceso de Myoporum empieza por identificar la especie. Los valores de estudios externos no se presentan como resultados de campo de San Camilo. Ver también [Investigación de propagación por especie](investigacion-propagacion-por-especie.md).
 
@@ -18,7 +18,9 @@ Las fichas detallan en palabras las operaciones, cantidades, condiciones, fechas
 
 - La reproducción solo comienza cuando la persona pulsa «Reproducir pasos»; hay pausa y reinicio.
 - La lista es contenido HTML ordenado, con títulos, detalles y estado comunicable (`aria-live`). Los botones usan controles nativos y son utilizables con teclado.
+- Cada etapa del SVG enlaza por índice con su paso textual; la interacción cambia el contorno/énfasis del panel y la tarjeta seleccionada.
 - Si `prefers-reduced-motion: reduce` está activo, los controles de movimiento se ocultan, la lista se conserva y el selector de proceso sigue disponible. Si la preferencia cambia durante la sesión, se detiene la secuencia.
+- Con movimiento reducido siguen disponibles «Anterior», «Siguiente» y la selección directa de una tarjeta, porque cambian el foco de lectura sin animar.
 - No se usa movimiento como única señal de estado; el texto anuncia inicio, pausa y final.
 - Anime.js se carga solo en páginas de detalle de plantas.
 
@@ -52,3 +54,9 @@ Los colores semánticos se centralizan en `src/assets/css/site.css`; `theme-colo
 ## Publicación en GitHub Pages
 
 Eleventy genera HTML estático y copia recursos locales. Las rutas de los scripts pasan por el filtro `url` para respetar el prefijo del repositorio en Pages. No se requiere servidor, API, compilación en el navegador, ni servicio externo. Tras modificar rutas o JS, comprobar que el archivo Anime.js se publica dentro de `dist/assets/vendor/` y que la ficha desplegada carga su módulo bajo el subdirectorio correcto.
+
+## Avance y trabajo de campo pendiente
+
+Las fichas ya ofrecen ocho recorridos entre las tres plantas y ocho láminas SVG originales: corte de Duranta, semilla de Duranta, corte de Lantana, comparación de luz, semilla de Lantana, identificación de mioporo, semilla de *M. laetum* y piloto de esquejes por confirmar. Las láminas destacan la etapa sincronizada con el texto y llevan su referencia o aviso de alcance.
+
+Queda pendiente obtener fotografías propias del material de San Camilo, confirmar la especie del mioporo y validar condiciones ambientales, lotes y calendario con el responsable del vivero. Hasta publicar mediciones locales, los esquemas de prueba siguen siendo guías de lectura de estudios o diseños exploratorios, no protocolos certificados para producción.

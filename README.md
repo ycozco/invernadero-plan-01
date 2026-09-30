@@ -49,7 +49,7 @@ La identidad del sitio se configura en `src/_data/site.json`; las plantillas y e
 
 El detalle de los estudios vive en `methods` dentro de `src/_data/plants.json`; la plantilla común de `src/plantas.njk` lo distribuye en las fichas individuales. Para resumir resultados, conservar explícitamente el tipo de evidencia y sus límites.
 
-Los procesos detallados y sus pasos se mantienen en `src/_data/processes.json`; la ficha los muestra completos y permite reproducir manualmente un resaltado de secuencia con Anime.js 4.5.0. La guía técnica, límites de evidencia, accesibilidad y decisión de alojar el bundle local para GitHub Pages están en [docs/animaciones-animejs-modo-oscuro.md](docs/animaciones-animejs-modo-oscuro.md). El sitio usa tema oscuro global definido en `src/assets/css/site.css`.
+Los procesos detallados y sus pasos se mantienen en `src/_data/processes.json`; cada ruta carga una lámina SVG original desde `src/assets/images/process/` y permite recorrer las etapas con Anime.js 4.5.0, o avanzar paso a paso. La guía técnica, límites de evidencia, accesibilidad, fotografías locales pendientes y decisión de alojar el bundle local para GitHub Pages están en [docs/animaciones-animejs-modo-oscuro.md](docs/animaciones-animejs-modo-oscuro.md). El sitio usa tema oscuro global definido en `src/assets/css/site.css`.
 
 ## GitHub Pages
 
