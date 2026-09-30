@@ -1,0 +1,9 @@
+<article class="plant-card plant-card--{{ plant.tone }}">
+  <a class="plant-card__link" href="{{ ('/plantas/' + plant.slug + '/') | url }}" aria-label="Ver ficha de {{ plant.scientificName }}">
+    <div class="plant-card__topline"><span>{{ plant.category }}</span><span aria-hidden="true">↗</span></div>
+    {% if plant.image %}<div class="plant-card__image"><img src="{{ plant.image.src | url }}" alt="{{ plant.image.alt }}" width="{{ plant.image.width }}" height="{{ plant.image.height }}" loading="lazy"><span>Imagen botánica de referencia</span></div>{% else %}<span class="plant-card__specimen" aria-hidden="true">{{ plant.commonName | first }}</span>{% endif %}
+    <div class="plant-card__body"><span class="status"><i></i>{{ plant.status }}</span><h3>{{ plant.commonName }}</h3><p class="latin">{{ plant.scientificName }}</p><p>{{ plant.summary }}</p></div>
+    <span class="plant-card__action">Abrir ficha <span aria-hidden="true">→</span></span>
+  </a>
+  {% if plant.image %}<p class="plant-card__credit">Foto: <a href="{{ plant.image.authorUrl }}" target="_blank" rel="noreferrer">{{ plant.image.author }}</a> · <a href="{{ plant.image.licenseUrl }}" target="_blank" rel="license noreferrer">{{ plant.image.license }}</a></p>{% endif %}
+</article>

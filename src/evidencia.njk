@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+title: Fuentes y evidencia
+description: Fuentes científicas y guías técnicas que informan la planificación del piloto de propagación.
+permalink: evidencia/index.html
+---
+<article class="editorial-page wrap"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ '/' | url }}">Proyecto</a><span aria-hidden="true">/</span><span aria-current="page">Fuentes y evidencia</span></nav><header class="editorial-heading"><p class="eyebrow"><span class="eyebrow-mark">CUADERNO / FUENTES</span> Lectura crítica</p><h1>Qué sabemos.<br><em>Qué falta probar.</em></h1><p>Las fuentes sirven para describir resultados bajo unas condiciones. Las propuestas de San Camilo se mantienen identificadas hasta que el ensayo las evalúe.</p></header><section class="source-list source-list--page">{% for source in sources %}<article class="source-card"><span>{{ source.category }}</span><h2>{{ source.title }}</h2><p>{{ source.scope }}</p><a href="{{ source.url }}" target="_blank" rel="noreferrer">{{ source.citation }} ↗</a></article>{% endfor %}</section><aside class="note-box"><strong>Lectura responsable</strong><p>Las citas son puntos de partida. Cada recomendación local necesita vincularse a una afirmación concreta, su fuente, la etapa correspondiente y las limitaciones de adaptación.</p></aside></article>

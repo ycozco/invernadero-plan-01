@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+title: Catálogo de plantas
+description: Especies del piloto de propagación en San Camilo y el estado de su protocolo de investigación.
+permalink: plantas/index.html
+---
+<section class="catalog-page wrap"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="{{ '/' | url }}">Proyecto</a><span aria-hidden="true">/</span><span aria-current="page">Plantas</span></nav><header class="catalog-heading"><p class="eyebrow"><span class="eyebrow-mark">DECOLUMAX / SAN CAMILO</span> Catálogo experimental</p><h1>Una especie<br><em>por ficha.</em></h1><p>La ficha muestra la pregunta, el estado del protocolo, qué se observará y de dónde proviene la evidencia.</p></header><div class="plant-grid plant-grid--catalog">{% for plant in plants %}{% include "components/plant-card.njk" %}{% endfor %}</div><aside class="note-box catalog-note"><strong>La especie importa.</strong><p>Un resultado publicado en una planta no se convierte automáticamente en receta para las demás. Las propuestas del piloto se identifican como tales.</p></aside></section>

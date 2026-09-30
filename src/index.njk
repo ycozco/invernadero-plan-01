@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Propagación vegetal en San Camilo
+description: "Estación experimental de propagación de Decolumax en San Camilo: plantas, diseño del módulo y preguntas de investigación."
+---
+<section class="hero wrap" aria-labelledby="home-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="eyebrow-mark">01</span> Decolumax · San Camilo <span class="eyebrow-rule"></span> Propagación experimental</p>
+    <h1 id="home-title">Observar mejor.<br><em>Propagar con evidencia.</em></h1>
+    <p class="hero-lede">Un módulo piloto para comparar tratamientos y sustratos, registrar el microclima y evaluar el enraizamiento antes de ampliar la producción.</p>
+    <div class="hero-actions"><a class="button button--solid" href="{{ '/plantas/' | url }}">Explorar plantas <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/modulo/' | url }}">Conocer el módulo <span aria-hidden="true">→</span></a></div>
+    <p class="hero-caption"><span class="status status--proposed"><i></i>Proyecto experimental</span> · La vista de mediciones simuladas está identificada como demostración.</p>
+  </div>
+  <aside class="hero-plate" aria-label="Ficha de identificación del módulo piloto">
+    <div class="plate-head"><span>CUADERNO DE CAMPO</span><span>SC / 01</span></div>
+    <div class="plate-drawing" aria-hidden="true">
+      <div class="sun-mark"></div><div class="roof-line"></div><div class="shade-line"></div><div class="wall-line wall-line--left"></div><div class="wall-line wall-line--right"></div><div class="bench-line"></div><div class="ground-line"></div>
+      <div class="specimen specimen--one"><i></i><b></b><span></span></div><div class="specimen specimen--two"><i></i><b></b><span></span></div><div class="specimen specimen--three"><i></i><b></b><span></span></div>
+      <div class="plate-measure plate-measure--top">MALLA DE SOMBRA <span>propuesta por validar</span></div><div class="plate-measure plate-measure--bottom">MÓDULO PILOTO <span>dimensiones de diseño*</span></div>
+    </div>
+    <div class="plate-foot"><span>* Verificar medidas y estado construido.</span><span>FIG. 01</span></div>
+  </aside>
+</section>
+
+<section class="facts-band" aria-label="Alcance del piloto"><div class="wrap facts-grid"><div><span class="fact-label">El proyecto estudia</span><strong>03 <small>plantas</small></strong></div><div><span class="fact-label">La pregunta común</span><strong class="fact-words">¿Qué enraíza mejor?</strong></div><div><span class="fact-label">El registro separa</span><strong class="fact-words">ensayo · medición · evidencia</strong></div><a class="facts-link" href="{{ '/metodo/' | url }}">Cómo se documenta <span aria-hidden="true">↗</span></a></div></section>
+
+<section class="section wrap" aria-labelledby="plants-title">
+  <div class="section-intro"><div><p class="eyebrow"><span class="eyebrow-mark">02</span> Colección piloto</p><h2 id="plants-title">Cada especie,<br><em>su propia pregunta.</em></h2></div><p>El módulo se comparte. La identificación, los tratamientos, la evidencia y los resultados se documentan por planta.</p></div>
+  <div class="plant-grid">{% for plant in plants %}{% include "components/plant-card.njk" %}{% endfor %}</div>
+  <div class="section-end"><span>03 fichas · el catálogo se amplía desde los datos de cada planta</span><a href="{{ '/plantas/' | url }}">Ver catálogo completo →</a></div>
+</section>
+
+<section class="field-section"><div class="wrap field-grid"><div><p class="eyebrow eyebrow--light"><span class="eyebrow-mark">03</span> Infraestructura piloto</p><h2>Un módulo para<br><em>comparar con cuidado.</em></h2><p>Una cubierta, una bancada y condiciones que se quieren medir. La ficha técnica distinguirá dimensiones proyectadas, componentes instalados y cambios hechos en campo.</p><a class="button button--light" href="{{ '/modulo/' | url }}">Ver diseño y componentes <span aria-hidden="true">→</span></a></div><div class="field-facts"><div><span>01 / MEDIO</span><strong>Agua y aireación</strong><p>Caracterizar la mezcla, el drenaje, el pH y la conductividad.</p></div><div><span>02 / AMBIENTE</span><strong>Clima y etapa</strong><p>Registrar condiciones junto a la etapa y el lote evaluados.</p></div><div><span>03 / RESULTADO</span><strong>Raíces contadas</strong><p>Publicar el denominador, la fecha y el tratamiento observado.</p></div></div></div></section>
+
+<section class="section section--closing wrap"><p class="eyebrow"><span class="eyebrow-mark">04</span> Cuaderno abierto</p><h2>Lo medido queda registrado.<br><em>Lo pendiente queda a la vista.</em></h2><p>Consulta qué respalda una decisión, qué se propone probar en San Camilo y qué datos faltan para completar el protocolo.</p><a class="button button--solid" href="{{ '/evidencia/' | url }}">Revisar fuentes y evidencia <span aria-hidden="true">↗</span></a></section>

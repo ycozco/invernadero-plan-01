@@ -1,0 +1,58 @@
+[
+  {
+    "id": "shiri-duranta-2019",
+    "category": "Duranta · propagación",
+    "title": "Rooting media and IBA concentration in Duranta erecta",
+    "citation": "Shiri et al. · African Journal of Plant Science",
+    "scope": "Ensayo específico de Duranta sobre medios y concentraciones de AIB. Sus condiciones y resultados no son una receta validada para San Camilo.",
+    "url": "https://academicjournals.org/journal/AJPS/article-abstract/CBB437F61875"
+  },
+  {
+    "id": "silva-duranta-2026",
+    "category": "Duranta · contexto peruano",
+    "title": "Enraizamiento de esquejes de Duranta erecta en Independencia, Lima",
+    "citation": "Lenny Silva Chilón · repositorio UNC, 2026",
+    "scope": "Tesis localizada como referencia potencialmente pertinente por su contexto peruano. Se conserva como candidata hasta contrastar método, resultados y alcance en el documento completo.",
+    "url": "https://repositorio.unc.edu.pe/bitstream/handle/20.500.14074/10443/TESIS%20LENNY%20SILVA%20CHILONpdf.pdf?sequence=1"
+  },
+  {
+    "id": "zhang-lantana-2014",
+    "category": "Lantana · crecimiento y temperatura",
+    "title": "Warming promotes the invasion of Lantana camara",
+    "citation": "Zhang et al. · PubMed, 2014",
+    "scope": "Estudia respuestas al calentamiento y al crecimiento; no determina por sí sola un protocolo óptimo para enraizar esquejes.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25184224/"
+  },
+  {
+    "id": "msu-moisture-2018",
+    "category": "Manejo · humedad",
+    "title": "Moisture management during vegetative cutting propagation",
+    "citation": "Michigan State University Extension, 2018",
+    "scope": "Explica el manejo de humedad durante la propagación por esquejes. No convierte horarios específicos en una pauta universal para cualquier especie o clima.",
+    "url": "https://msu-prod.dotcmscloud.com/news/moisture_management_during_vegetative_cutting_propagation"
+  },
+  {
+    "id": "umass-mist-fog",
+    "category": "Manejo · niebla y nebulización",
+    "title": "Mist and Fog Equipment for Propagation",
+    "citation": "UMass Extension · Greenhouse Floriculture",
+    "scope": "Guía sobre equipos y ambiente de propagación; sirve de apoyo conceptual, no reemplaza el diseño y la validación de las condiciones locales.",
+    "url": "https://www.umass.edu/agriculture-food-environment/greenhouse-floriculture/fact-sheets/mist-fog-equipment-for-propagation"
+  },
+  {
+    "id": "ncsu-substrates",
+    "category": "Sustratos · propiedades",
+    "title": "Substrates",
+    "citation": "NC State Extension · Nursery Crops",
+    "scope": "Referencia técnica para describir propiedades físicas y químicas de medios de cultivo y la necesidad de medir las mezclas.",
+    "url": "https://nurserycrops.ces.ncsu.edu/substrates/"
+  },
+  {
+    "id": "kew-powo",
+    "category": "Taxonomía · Myoporum",
+    "title": "Plants of the World Online",
+    "citation": "Royal Botanic Gardens, Kew",
+    "scope": "Catálogo para verificar nombres científicos aceptados una vez identificada la especie. No permite resolver por sí solo qué planta local se llama «mioporo».",
+    "url": "https://powo.science.kew.org/results?q=Myoporum"
+  }
+]

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e6">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }} · {{ site.brand }} / {{ site.project }}</title>
+    <link rel="preload" href="{{ '/assets/fonts/source-serif-4-variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/source-sans-3-variable.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="{{ site.brand }} · {{ site.project }}">
+    <meta property="og:title" content="{{ title }} · {{ site.brand }} / {{ site.project }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+    <meta property="og:image" content="{{ site.url }}{{ '/assets/images/og.jpg' | url }}">
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="Ilustración conceptual de un módulo de propagación y ramas botánicas.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="wordmark" href="{{ '/' | url }}" aria-label="{{ site.brand }}, {{ site.project }}, inicio">
+        <span class="wordmark-seed" aria-hidden="true">d.</span>
+        <span><strong>{{ site.brand }}</strong><small>{{ site.project }} · {{ site.descriptor }}</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="{{ '/' | url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Proyecto</a>
+        <a href="{{ '/plantas/' | url }}" {% if page.url == '/plantas/' %}aria-current="page"{% endif %}>Plantas</a>
+        <a href="{{ '/modulo/' | url }}" {% if page.url == '/modulo/' %}aria-current="page"{% endif %}>El módulo</a>
+        <a href="{{ '/metodo/' | url }}" {% if page.url == '/metodo/' %}aria-current="page"{% endif %}>Método</a>
+        <a href="{{ '/mediciones/' | url }}" {% if page.url == '/mediciones/' %}aria-current="page"{% endif %}>Mediciones</a>
+      </nav>
+      <a class="header-note" href="{{ '/evidencia/' | url }}">Fuentes y evidencia <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="contenido">{{ content | safe }}</main>
+    <footer class="site-footer">
+      <a class="footer-brand" href="{{ '/' | url }}">{{ site.brand }} <span>· {{ site.project }}</span></a>
+      <p>{{ site.tagline }} <span>La evidencia y las propuestas se identifican por separado.</span></p>
+      <a href="{{ site.github }}" target="_blank" rel="noreferrer">Repositorio del proyecto ↗</a>
+    </footer>
+    {% for script in scripts %}<script type="module" src="{{ script | url }}"></script>{% endfor %}
+  </body>
+</html>
