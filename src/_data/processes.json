@@ -1,0 +1,93 @@
+{
+  "duranta-erecta": [
+    {
+      "title": "Esqueje apical · ensayo publicado",
+      "context": "Resumen del ensayo de Shiri et al. (2019), no una receta validada en San Camilo. La supervivencia reportada no debe confundirse con el porcentaje de esquejes enraizados.",
+      "steps": [
+        {"title":"Planifica los tratamientos","detail":"Prepara 360 unidades experimentales, distribuidas en 3 repeticiones de 10 por combinación. Define de antemano medio y concentración de AIB (0, 2500, 5000 o 7500 ppm) y etiqueta cada lote."},
+        {"title":"Selecciona y corta","detail":"Por la mañana elige puntas sanas de plantas madre maduras, sin botones florales. Corta segmentos blandos de unos 10 cm con al menos 2 yemas; mantenlos frescos y evita que se deshidraten."},
+        {"title":"Prepara cada esqueje","detail":"Retira las hojas basales y conserva las superiores. En los grupos asignados a AIB, trata los 5 mm basales con polvo durante 10 segundos; mantén el control sin hormona."},
+        {"title":"Inserta en el medio asignado","detail":"Compara arena de río, corteza de pino y mezcla turba:perlita 1:1. Mantén separados y etiquetados los grupos para atribuir correctamente cualquier diferencia."},
+        {"title":"Mantén y registra el ambiente","detail":"En el estudio se aplicó aspersión dos veces al día durante 15 minutos. Registra humedad, temperatura y cualquier cambio: el artículo no informa la temperatura del invernadero y el horario no es universal."},
+        {"title":"Evalúa a las 7 semanas","detail":"Anota supervivencia por separado de esquejes con raíces; cuenta raíces y brotes y mide su longitud. El 81,85% asociado a 5000 ppm fue supervivencia, no tasa de enraizamiento."}
+      ]
+    },
+    {
+      "title": "Semilla fresca · referencia secundaria",
+      "context": "La referencia secundaria resume un dato de Lorenzi (2009), pero no expone el ensayo primario ni su tamaño de muestra. Úsalo solo para diseñar observaciones exploratorias.",
+      "steps": [
+        {"title":"Registra el lote","detail":"Identifica planta madre, fecha de madurez del fruto, procedencia y cantidad. Conserva por separado los lotes para que la procedencia no se mezcle."},
+        {"title":"Siembra pronto","detail":"La compilación recomienda sembrar semilla madura poco después de recolectarla y con sombra parcial. No aporta profundidad, sustrato ni temperatura precisos."},
+        {"title":"Mantén etiquetas y condiciones","detail":"Anota medio, riego, sombra y fechas. Mantén condiciones constantes dentro del lote y evita atribuir diferencias a un factor si cambian varias condiciones a la vez."},
+        {"title":"Observa durante meses","detail":"La fuente reporta menos de 20% de germinación y emergencia a los 90–110 días. Registra emergencia acumulada y fecha; ese valor no garantiza el resultado de otro lote."}
+      ]
+    }
+  ],
+  "lantana-camara": [
+    {
+      "title": "Esqueje semileñoso · ‘Little Lucky’",
+      "context": "Loconsole et al. (2022) ensayaron un cultivar ornamental en Italia. Mantén las condiciones y resultados como referencia comparativa; no como óptimo universal para Lantana local.",
+      "steps": [
+        {"title":"Identifica y asigna","detail":"Registra especie, cultivar, planta madre y fecha. El estudio usó 15 plantas madre y asignó 405 esquejes a control, AIB o extracto de algas con réplicas experimentales."},
+        {"title":"Corta el material","detail":"Toma esquejes semileñosos medianos de 5–6 cm con 3 nudos. Retira hojas basales y conserva 6 hojas en cada corte."},
+        {"title":"Prepara bandejas y medio","detail":"Usa bandejas de 104 celdas (3,5 cm) con turba:perlita 80:20 y pH 5–6, tal como se reportó. Registra cualquier sustitución de materiales."},
+        {"title":"Aplica los tratamientos","detail":"Compara control sin producto, AIB 1250 mg/L con inmersión basal de 10 mm y Goteo a 1, 2 o 3 mL/L pulverizado hasta escurrimiento cada dos semanas por tres aplicaciones. La formulación del producto importa."},
+        {"title":"Maneja y registra el ambiente","detail":"El ensayo tuvo 50% de sombra, aire a 12–20 °C, cama radicular a 18 ± 1 °C y niebla 60 s cada 20 min entre 8:00 y 15:00. Son condiciones experimentales, no instrucciones automáticas para otro clima."},
+        {"title":"Mide en dos fechas","detail":"A los 35 días contó raíces mayores de 0,5 cm y evaluó su morfología; a los 50 días calculó enraizamiento = esquejes enraizados ÷ total evaluado × 100. El estudio obtuvo 80,7% en control y 91,7% con AIB."}
+      ]
+    },
+    {
+      "title": "Respuesta a luz · tres cultivares en Nicaragua",
+      "context": "Castro Castro y Aguilar Maradiaga (2024) compararon 54, 130 y 200 µmol m⁻² s⁻¹ durante tres semanas. La respuesta varió entre cultivares; 130 no es una recomendación universal.",
+      "steps": [
+        {"title":"Separa las variedades","detail":"Identifica ‘Copo de oro’, ‘Sonrisa de rosa’ o ‘Pequeña amarilla’ y registra cada planta madre. No mezcles los cultivares en el análisis."},
+        {"title":"Asigna luz y réplicas","detail":"Compara 54, 130 y 200 µmol m⁻² s⁻¹ con observaciones replicadas por tratamiento y cultivar. Mide la luz con instrumento y registra ubicación y periodo diario."},
+        {"title":"Mantén constantes los otros factores","detail":"Registra longitud del esqueje, número de hojas, medio, humedad y temperatura. El resumen disponible describe tres semanas; no conviertas el resultado en protocolo completo de enraizamiento."},
+        {"title":"Mide las respuestas","detail":"A las tres semanas registra longitud, nervadura central, número de raíces adventicias, defoliación y botones florales para cada esqueje."},
+        {"title":"Interpreta por cultivar","detail":"130 favoreció varias medidas frente a 54, mientras 200 estimuló botones florales. Las magnitudes cambiaron por cultivar; conserva los datos desglosados y no declares una intensidad óptima común."}
+      ]
+    },
+    {
+      "title": "Semilla · ensayo de dormancia",
+      "context": "Wijayabandara et al. (2013) estudiaron lotes de Sri Lanka cerca de 27–28 °C durante 30 días. El tratamiento con GA₃ produjo respuestas bajas y variables; esta evidencia no establece receta de vivero.",
+      "steps": [
+        {"title":"Divide por procedencia","detail":"Identifica los dos orígenes del estudio y conserva la trazabilidad de cada lote. La procedencia puede influir en la respuesta."},
+        {"title":"Prepara los grupos de comparación","detail":"Compara semillas intactas, escarificadas y GA₃ a 100 o 500 ppm, además de luz y oscuridad. El artículo usó tres réplicas de 15 semillas por tratamiento."},
+        {"title":"Incuba y observa","detail":"Mantén cerca de 27–28 °C y registra germinación cada dos días hasta 30 días. Anota la definición de germinación y las condiciones reales de cada bandeja."},
+        {"title":"Reporta el límite","detail":"No hubo germinación en 30 días con semilla intacta o escarificada sin hormona. Con GA₃ los máximos fueron 18–20%; la escarificación sola no resolvió la dormancia."}
+      ]
+    }
+  ],
+  "mioporo": [
+    {
+      "title": "Primero: identifica la planta madre",
+      "context": "La ficha local sigue como Myoporum sp. ‘Mioporo’ se aplica regionalmente a más de una especie. No atribuyas los resultados de M. laetum a la planta de San Camilo sin identificación.",
+      "steps": [
+        {"title":"Documenta el ejemplar","detail":"Fotografía la planta completa, hojas por ambas caras, ramillas, flores y frutos disponibles. Incluye escala y fecha para que los rasgos se puedan revisar."},
+        {"title":"Registra procedencia y rasgos","detail":"Anota ubicación, nombre local, forma de crecimiento, dimensiones y características observadas; no infieras una especie solo por el nombre común."},
+        {"title":"Solicita confirmación botánica","detail":"Contrasta ejemplar y caracteres con un herbario, botánico o clave regional. Guarda quién identificó el material, fecha y nivel de certeza."},
+        {"title":"Asocia la bibliografía correctamente","detail":"Hasta confirmar la especie, etiqueta los ensayos como exploratorios. El dato de germinación prolongada de la ficha corresponde específicamente a M. laetum."}
+      ]
+    },
+    {
+      "title": "Semilla · estudio de Myoporum laetum",
+      "context": "Burrows (1996) estudió M. laetum en Nueva Zelanda. Este es un calendario de observación de esa especie y procedencia; la germinación puede tardar años.",
+      "steps": [
+        {"title":"Limpia y etiqueta semilla madura","detail":"Separa la semilla del fruto y conserva la identidad de la planta madre. En el ensayo, las semillas contenidas en el fruto no germinaron."},
+        {"title":"Siembra en condiciones húmedas e iluminadas","detail":"La fuente describe semilla limpia, húmeda y con buena luz en invernadero parcialmente sombreado y sin calefacción. No fija una fórmula universal de sustrato."},
+        {"title":"Registra germinación escalonada","detail":"Anota revisiones y emergencia desde los primeros meses. La primera germinación apareció cerca de cinco meses; no descartes bandejas tempranamente."},
+        {"title":"Mantén seguimiento multianual","detail":"El total acumulado llegó a 90% hasta cinco años en ese estudio. Planifica etiquetas durables y controles periódicos, y no prometas ese porcentaje para otras especies o lotes."}
+      ]
+    },
+    {
+      "title": "Esquejes · piloto exploratorio por identificar",
+      "context": "Guías de M. laetum y Myoporum australianos mencionan esquejes semileñosos o madera endurecida, pero no se hallaron tasas específicas para el ejemplar local. Diseña un piloto después de confirmar identidad.",
+      "steps": [
+        {"title":"Confirma identidad y material","detail":"Antes de cortar, identifica especie, planta madre y estado fenológico. Registra si el material es tierno, semileñoso o endurecido."},
+        {"title":"Define grupos comparables","detail":"Como piloto, distribuye esquejes homogéneos entre un control sin hormona y tratamientos claramente registrados. Define réplicas y número por grupo antes de empezar."},
+        {"title":"Registra preparación y ambiente","detail":"Anota longitud, nudos, hojas retiradas, medio, humedad, luz y temperatura. Las guías citadas no proporcionan una receta cuantitativa validada para San Camilo."},
+        {"title":"Evalúa y publica el resultado local","detail":"En fechas predefinidas registra supervivencia, proporción enraizada, fecha de primera raíz y número/longitud de raíces. Reporta el tamaño de muestra y cualquier pérdida."}
+      ]
+    }
+  ]
+}

@@ -113,19 +113,18 @@ Los valores visuales se centralizan como propiedades semánticas en `:root` de `
 
 | Token propuesto | Color | Uso |
 | --- | --- | --- |
-| `--color-paper` | `#F4F0E6` | Fondo principal |
-| `--color-surface` | `#FFFCF5` | Superficies de lectura |
-| `--color-ink` | `#202923` | Texto y encabezados |
-| `--color-muted` | `#566259` | Texto secundario legible |
-| `--color-brand` | `#244B3A` | Marca, enlaces y acción principal |
-| `--color-accent` | `#B65E3C` | Terracota para detalles y gráficos |
-| `--color-accent-text` | `#934329` | Terracota oscuro para texto pequeño |
-| `--color-water` | `#27657A` | Humedad/agua, con etiqueta de variable |
-| `--color-warning` | `#865A16` | Advertencia acompañada de texto |
-| `--color-danger` | `#A33632` | Error o evento crítico acompañado de texto |
-| `--color-border` | `#D7DCCF` | Separación decorativa, no único límite de un control |
+| `--paper` | `#101612` | Fondo oscuro principal |
+| `--surface` | `#18211b` | Superficies de lectura |
+| `--surface-muted` | `#232e27` | Avisos y planos elevados |
+| `--ink` | `#eef4eb` | Texto y encabezados |
+| `--muted` | `#bdc9bf` | Texto secundario |
+| `--green` | `#90bd96` | Marca, enlaces y acción principal |
+| `--terracotta` | `#e8a27d` | Acento cálido para detalles |
+| `--water` | `#82c7dc` | Humedad/agua, con etiqueta de variable |
+| `--line` | `#2c3a31` | Separación y bordes |
+| `--focus` | `#e8c77a` | Foco visible de teclado |
 
-Proporción visual orientativa: 75% neutros, 20% verde/grafito y 5% acentos. No se aplica como fórmula a las fotografías.
+Proporción visual orientativa: 75% neutros oscuros, 20% verde/grafito y 5% acentos. No se aplica como fórmula a las fotografías. La implementación y el criterio de contraste se documentan en [Anime.js, procesos explicados y tema oscuro](animaciones-animejs-modo-oscuro.md).
 
 Contrastes calculados con luminancia relativa para colores sólidos sobre `#F4F0E6`: tinta 13.15:1, texto secundario 5.61:1, verde 8.61:1, terracota oscuro 6.00:1, azul 5.72:1, advertencia 5.29:1 y error 5.89:1. Papel sobre verde: 8.61:1.
 
